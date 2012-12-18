@@ -2,8 +2,12 @@ body {
 	font-family: 'Muli', sans-serif;/*'Muli', sans-serif;*/
 	/* background: #3fa647;*/
 	height: 100%;
-	background: -moz-linear-gradient(top, #ffffff, #122625);
-	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#122625));
+	background: #ffffff;
+	background: -webkit-linear-gradient(top, #ffffff, #122625);
+	background:    -moz-linear-gradient(top, #ffffff, #122625);
+	background:     -ms-linear-gradient(top, #ffffff, #122625);
+	background:      -o-linear-gradient(top, #ffffff, #122625);
+	background:         linear-gradient(top, #ffffff, #122625);
 	color: #000000;
 	margin-left: 0px;
 	margin-right: 0px;
@@ -257,10 +261,10 @@ footer small a:hover {
 	opacity: 0;
 
 	-webkit-transition: opacity linear 0.1s;
-	-moz-transition: opacity linear 0.1s;
-	-o-transition: opacity linear 0.1s;
-	-ms-transition: opacity linear 0.1s;
-	transition: opacity linear 0.1s;
+	   -moz-transition: opacity linear 0.1s;
+	    -ms-transition: opacity linear 0.1s;
+	     -o-transition: opacity linear 0.1s;
+	        transition: opacity linear 0.1s;
 }
 
 .tabs input.tab-selector-1:checked ~ .content .content-1,
@@ -273,10 +277,10 @@ footer small a:hover {
 	opacity: 1;
 
 	-webkit-transition: opacity ease-out 0.2s 0.1s;
-	-moz-transition: opacity ease-out 0.2s 0.1s;
-	-o-transition: opacity ease-out 0.2s 0.1s;
-	-ms-transition: opacity ease-out 0.2s 0.1s;
-	transition: opacity ease-out 0.2s 0.1s;
+	   -moz-transition: opacity ease-out 0.2s 0.1s;
+	    -ms-transition: opacity ease-out 0.2s 0.1s;
+	     -o-transition: opacity ease-out 0.2s 0.1s;
+	        transition: opacity ease-out 0.2s 0.1s;
 }
 
 .content div h2,
@@ -320,9 +324,10 @@ footer small a:hover {
 .horizontal .items {
 	width: 3400px;
 	-webkit-animation: hscroll 20s infinite;
-	-moz-animation: hscroll 20s infinite;
-	-ms-animation: hscroll 20s infinite;
-	animation: hscroll 20s infinite;
+	   -moz-animation: hscroll 20s infinite;
+	    -ms-animation: hscroll 20s infinite;
+	     -o-animation: hscroll 20s infinite;
+	        animation: hscroll 20s infinite;
 }
 
 .horizontal .item {
@@ -350,6 +355,13 @@ footer small a:hover {
 	100%  { margin-left: 0 }
 }
 @-ms-keyframes hscroll {
+	0%, 18.75%  { margin-left: 0 }
+	25%, 43.75% { margin-left: -850px; }
+	50%, 68.75% { margin-left: -1700px; }
+	75%, 93.75% { margin-left: -2550px; }
+	100%  { margin-left: 0 }
+}
+@-o-keyframes hscroll {
 	0%, 18.75%  { margin-left: 0 }
 	25%, 43.75% { margin-left: -850px; }
 	50%, 68.75% { margin-left: -1700px; }
