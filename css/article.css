@@ -23,7 +23,7 @@ article .header h1 {
 	border-bottom: 2px solid #FF0000;
 }
 
-article .header h1:before,  {
+article .header h1:before {
 	color: #FF0000;
 	font-family: 'Knewave', cursive;
 	content: "";
