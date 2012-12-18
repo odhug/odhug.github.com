@@ -1,5 +1,5 @@
 .feed {
-    position: relative;
+	position: relative;
 	margin: 40px auto;
 	width: 870px;
 	background: #ffffff;
@@ -10,8 +10,7 @@
 article {
 	padding-right: 10px;
 	padding-top: 2px;
-	border-bottom: 8px solid rgba(63,148,148, 0.1);	
-
+	border-bottom: 8px solid rgba(63,148,148, 0.1);
 }
 
 article h1 {
@@ -26,12 +25,10 @@ article .footer {
 article .footer address {
 	width: 250px;
 	display: inline;
-
 }
 
 article .footer time {
 	display: inline;
-
 }
 
 article .footer h5 {
@@ -42,7 +39,6 @@ article .footer h5 {
 
 article .footer h5 a {
 	display: inline;
-
 }
 
 
