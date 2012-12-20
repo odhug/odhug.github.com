@@ -88,10 +88,6 @@ main = hakyll $ do
     >>> arr tagsMap
     >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
 
-  -- render reports list by tag
-
-  -- render hackatons list by tag
-
   -- Render RSS feed
   match "rss.xml" $ route idRoute
   create "rss.xml" $
