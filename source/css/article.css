@@ -1,0 +1,67 @@
+.wrapper {
+	position: relative;
+	margin: 40px auto;
+	width: 870px;
+	background: #ffffff;
+	padding-left: 15px;
+	box-shadow: 0 0.3em 0.8em #000000;
+}
+
+article {
+	padding-right: 10px;
+	padding-top: 2px;
+	border-bottom: 8px solid rgba(63,148,148, 0.1);
+}
+
+article h1, h2, h3, h4, h5 {
+	font-family: 'Nothing You Could Do', cursive;
+}
+
+article .header h1 {
+	font-size: 28px;
+	font-weight: bold;
+	border-bottom: 2px solid #FF0000;
+}
+
+article .header h1:before {
+	color: #FF0000;
+	font-family: 'Knewave', cursive;
+	content: "";
+}
+
+article h1 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+article h1:before {
+	color:  #FF0000;
+	font-family: 'Knewave', cursive;
+	content: "/ ";
+}
+
+article h2:before {
+	font-size: 20px;
+	font-family: 'Knewave', cursive;
+	color:  #FF0000;
+	content: "// ";
+}
+
+
+article h3:before {
+	font-size: 16px;
+	font-family: 'Knewave', cursive;
+	color:  #FF0000;
+	content: "/// ";
+}
+
+article h4:before {
+	font-size: 12px;
+	font-family: 'Knewave', cursive;
+	color:  #FF0000;
+	content: "//// ";
+}
+
+article .figure {
+	margin-left: 125px;
+}
