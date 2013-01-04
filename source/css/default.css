@@ -8,7 +8,7 @@ body {
 	background:     -ms-linear-gradient(top, #ffffff, #122625);
 	background:      -o-linear-gradient(top, #ffffff, #122625);
 	background:         linear-gradient(top, #ffffff, #122625);
-	color: #000000;
+	color: #fff;
 	margin-left: 0px;
 	margin-right: 0px;
 	width: 100%;
@@ -49,7 +49,7 @@ header nav img {
 header nav {
 	color: #F2F2F2;
 	width: 450px;
-	margin-left: 15%;
+	margin-left: 5%;
 }
 
 header nav ul {
@@ -92,8 +92,8 @@ header ul li a:hover {
 .left {
 	color: #ffffff;
         width: 350px;
-        margin-left: 20%;
         float: left;
+        margin-left: 100px;
 }
 
 .right {
@@ -105,12 +105,14 @@ header ul li a:hover {
 
 .pevents {
 	width: 450px;
+        border: 5px solid #ffffff;
 
 }
 
 .fevents {
 	width: 450px;
-
+        border: 5px solid #ffffff;
+        margin-bottom: 10px;
 }
 
 
@@ -332,9 +334,10 @@ footer small a:hover {
 	border-left: 8px solid rgba(63,148,148, 0.1);
 }
 
-.container {
-	margin-left: 0.2%;
-        margin-top: -40px;
+.about {
+        margin-top: 20px;
+        border: 5px solid #ffffff;
+        width: 450px;
 }
 
 
