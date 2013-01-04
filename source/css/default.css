@@ -101,7 +101,6 @@ header ul li a:hover {
         float: right;
         margin-right: 100px;
         position: relative;
-        @-moz-document: margin-top: -320px; 
 }
 
 .pevents {
