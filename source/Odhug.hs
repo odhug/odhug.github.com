@@ -50,29 +50,28 @@ main = hakyll $ do
   -- render index page
   match "index.html" $ do
     route idRoute
-    compile $ do
-       dummyItem <- makeItem ""
-       body <-
-         loadAndApplyTemplate "templates/index.html"
-          ( constField "fevents" "" <>
-            constField "pevents" "" <>
-            defaultContext) dummyItem
-       loadAndApplyTemplate
+    compile $
+      makeItem "" >>=
+      loadAndApplyTemplate "templates/index.html"
+         (constField "fevents" "" <>
+          constField "pevents" "" <>
+          defaultContext) >>=
+      loadAndApplyTemplate
         "templates/default.html"
-        (constField "body" (itemBody body) <> defaultContext)
-        dummyItem
+        defaultContext
 
   match "posts/*" $ compile pandocCompiler
 
   match "blog.html" $ do
     route idRoute
-    compile $ do
-      posts <- posts
-      dummyItem <- makeItem ""
-      blog <-
-        loadAndApplyTemplate "templates/posts.html"
-          (constField "posts" posts <> defaultContext)
-          dummyItem
+    compile $ do {
+      posts <- posts;
+
+      makeItem "" >>=
+
+      loadAndApplyTemplate "templates/posts.html"
+        (constField "posts" posts <> defaultContext) >>=
+
       loadAndApplyTemplate "templates/default.html"
-        (constField "body" (itemBody blog) <> defaultContext)
-        dummyItem
+        defaultContext
+    }
