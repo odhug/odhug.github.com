@@ -82,18 +82,26 @@ header ul li a:hover {
 
 
 /* -------------------------------Content--------------------------------------------- */
+.contento {
+
+    dispaly: inline;
+    width: 100%;
+
+}
 
 .left {
 	color: #ffffff;
-        width: 450px;
+        width: 350px;
         margin-left: 20%;
         float: left;
 }
 
 .right {
         width: 450px;
-        float: left;
-
+        float: right;
+        margin-right: 100px;
+        position: relative;
+        @-moz-document: margin-top: -320px; 
 }
 
 .pevents {
