@@ -22,7 +22,12 @@ import System.Locale
 import Control.Monad
 import Control.Applicative
 import Data.Maybe
+import Control.Monad.Trans
+import Control.Error
+import Text.Printf
 import Hakyll
+import Text.JSON
+import qualified Data.Map as Map
 
 ----------------------------------------------------------------------
 
@@ -75,3 +80,43 @@ main = hakyll $ do
       loadAndApplyTemplate "templates/default.html"
         defaultContext
     }
+
+  {-
+  match "posts/*.md" $ do
+    route $ setExtension "html"
+    compile $ pandocCompiler >>= loadAndApplyTemplate "templates/default.html" defaultContext
+  -}
+  match "events.js" $ do
+    route idRoute
+    compile $ do
+      posts <- loadAll "posts/*.md"
+      tmpl <- loadBody "templates/eventDescription.tmpl"
+      events <-
+        liftM (makeEventList . catMaybes) $ forM posts $ \p -> runMaybeT $ do
+          mdata <- lift $ getMetadata $ itemIdentifier p
+          dateStr <- hoistMaybe $ Map.lookup "eventDate" mdata
+          let
+            date :: Day
+            date = parseDate (itemIdentifier p) dateStr
+          description <-
+            liftM itemBody $
+            lift $
+            applyTemplate tmpl (constField "url" "todo" <> defaultContext) p
+          return (date, description)
+      loadAndApplyTemplate
+        "templates/events.js"
+        (constField "events" events)
+        =<< makeItem ()
+
+parseDate loc str =
+  fromMaybe err $ parseTime defaultTimeLocale "%Y-%m-%d" str
+  where err = error $ printf "Bad date in %s: %s"
+
+formatDate date = formatTime defaultTimeLocale "%Y-%m-%d" date
+
+makeEventList :: [(Day, String)] -> String
+makeEventList events =
+  encode $ flip map events $ \(date, description) ->
+    toJSObject
+      [("eventDescription", description)
+      ,("eventDate", formatDate date)]
