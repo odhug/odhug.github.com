@@ -99,10 +99,11 @@ main = hakyll $ do
             date :: Day
             date = parseDate (itemIdentifier p) dateStr
             prettyDate = formatTime ourLocale "%-d %B %Y" date
+            ymdDate = formatDate date
           description <-
             liftM itemBody $
             lift $
-            applyTemplate tmpl (constField "url" "todo" <> constField "date" prettyDate <> defaultContext) p
+            applyTemplate tmpl (constField "url" "todo" <> constField "date" prettyDate <> constField "datetime" ymdDate <> defaultContext) p
           return (date, description)
       loadAndApplyTemplate
         "templates/events.js"
