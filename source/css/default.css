@@ -412,3 +412,6 @@ footer small a:hover {
 	100%  { margin-left: 0 }
 }
 
+time {
+	font-weight: bold;
+	}
