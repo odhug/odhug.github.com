@@ -114,6 +114,11 @@ header ul li a:hover {
         margin-bottom: 10px;
 }
 
+h2 {
+  font-size: 20px;
+  color: #7C7C7C;
+}
+
 #container-main {  
 	margin:-10px auto 40px auto;
 	max-width:980px;
