@@ -2,11 +2,11 @@ html {
 	font-family: 'PT Serif', serif;
 	/* background: #3fa647;*/
 	background: #f8f8f8;
-	--background: -webkit-linear-gradient(top, #1f2d29, #122625);
-	--background:    -moz-linear-gradient(top, #1f2d29, #122625);
-	--background:     -ms-linear-gradient(top, #1f2d29, #122625);
-	--background:      -o-linear-gradient(top, #1f2d29, #122625);
-	--background:         linear-gradient(top, #1f2d29, #122625);
+	/*background: -webkit-linear-gradient(top, #1f2d29, #122625);
+	background:    -moz-linear-gradient(top, #1f2d29, #122625);
+	background:     -ms-linear-gradient(top, #1f2d29, #122625);
+	background:      -o-linear-gradient(top, #1f2d29, #122625);
+	background:         linear-gradient(top, #1f2d29, #122625);*/
 	color: #000000;
 	margin-left: 0px;
 	margin-right: 0px;
@@ -88,7 +88,7 @@ header ul li a:hover {
 /* -------------------------------Content--------------------------------------------- */
 .contento {
 
-    dispaly: inline;
+    display: inline;
     width: 100%;
 
 }
@@ -119,16 +119,17 @@ h2 {
   color: #7C7C7C;
 }
 
-#container-main {  
+#container-main {
 	margin:-10px auto 40px auto;
 	max-width:980px;
+	min-width: 900px;
 	display:block;
 	padding-top:20px;
 	height: 100%;
 }
 
 
-#container-bg {  
+#container-bg {
         background-color: #f8f8f8;/*#f0f0f0;*/
 	margin:-10px auto 40px auto;
 	max-width:870px;
@@ -146,7 +147,7 @@ h2 {
 .container-fluid {
   padding-right: 20px;
   padding-left: 20px;
-  *zoom: 1;
+  zoom: 1;
 }
 
 /* -------------------------------Footer--------------------------------------------- */
@@ -447,4 +448,10 @@ footer small a:hover {
 
 time {
 	font-weight: bold;
-	}
+}
+
+#forum {
+	border: none;
+	height: 1500px;
+	width: 100%;
+}
