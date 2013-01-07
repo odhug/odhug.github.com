@@ -15,6 +15,11 @@ article {
 	border-bottom: 8px solid rgba(63,148,148, 0.1);
 }
 
+.container:last-child article {
+	border-bottom: none;
+	padding-bottom: 8px;
+}
+
 article .footer {
 	width: 850px;
 	display: inline-block;
