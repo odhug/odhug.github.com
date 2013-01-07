@@ -52,7 +52,7 @@ main = hakyll $ do
     compile copyFileCompiler
 
   -- render index page
-  match "index.html" $ do
+  create ["index.html"] $ do
     route idRoute
     compile $
       makeItem "" >>=
@@ -67,7 +67,7 @@ main = hakyll $ do
 
   match "posts/*" $ compile pandocCompiler
 
-  match "blog.html" $ do
+  create ["blog.html"] $ do
     route idRoute
     compile $ do {
       posts <- posts;
@@ -86,7 +86,7 @@ main = hakyll $ do
     route $ setExtension "html"
     compile $ pandocCompiler >>= loadAndApplyTemplate "templates/default.html" defaultContext
   -}
-  match "events.js" $ do
+  create ["events.js"] $ do
     route idRoute
     compile $ do
       posts <- loadAll "posts/*.md"
@@ -113,7 +113,7 @@ main = hakyll $ do
         =<< makeItem ()
 
   -- render forum 
-  match "forum.html" $ do
+  create ["forum.html"] $ do
   route idRoute
   compile $ makeItem "" >>= 
             loadAndApplyTemplate "templates/forum.html" 
