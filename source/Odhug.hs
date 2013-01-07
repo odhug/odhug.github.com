@@ -51,19 +51,24 @@ main = hakyll $ do
     route   idRoute
     compile copyFileCompiler
 
+  match "about.md" $ compile $ pandocCompiler
+
   -- render index page
   create ["index.html"] $ do
     route idRoute
-    compile $
+    compile $ do {
+      about <- loadBody "about.md";
       makeItem "" >>=
       loadAndApplyTemplate "templates/index.html"
          (constField "fevents" "" <>
           constField "pevents" "" <>
           constField "images"  "" <>
+          constField "about" about <>
           defaultContext) >>=
       loadAndApplyTemplate
         "templates/default.html"
         defaultContext
+    }
 
   match "posts/*" $ compile pandocCompiler
 
