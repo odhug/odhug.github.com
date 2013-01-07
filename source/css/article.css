@@ -13,10 +13,6 @@ article {
 	border-bottom: 8px solid rgba(63,148,148, 0.1);
 }
 
-article h1, h2, h3, h4, h5 {
-	font-family: 'Nothing You Could Do', cursive;
-}
-
 article .header h1 {
 	font-size: 28px;
 	font-weight: bold;
@@ -25,41 +21,12 @@ article .header h1 {
 
 article .header h1:before {
 	color: #FF0000;
-	font-family: 'Knewave', cursive;
 	content: "";
 }
 
 article h1 {
 	font-size: 24px;
 	font-weight: bold;
-}
-
-article h1:before {
-	color:  #FF0000;
-	font-family: 'Knewave', cursive;
-	content: "/ ";
-}
-
-article h2:before {
-	font-size: 20px;
-	font-family: 'Knewave', cursive;
-	color:  #FF0000;
-	content: "// ";
-}
-
-
-article h3:before {
-	font-size: 16px;
-	font-family: 'Knewave', cursive;
-	color:  #FF0000;
-	content: "/// ";
-}
-
-article h4:before {
-	font-size: 12px;
-	font-family: 'Knewave', cursive;
-	color:  #FF0000;
-	content: "//// ";
 }
 
 article .figure {

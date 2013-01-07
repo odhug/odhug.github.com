@@ -59,6 +59,7 @@ main = hakyll $ do
       loadAndApplyTemplate "templates/index.html"
          (constField "fevents" "" <>
           constField "pevents" "" <>
+          constField "images"  "" <>
           defaultContext) >>=
       loadAndApplyTemplate
         "templates/default.html"

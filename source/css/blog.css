@@ -1,10 +1,10 @@
-.feed {
+#feed {
         font-family: 'PT Serif', serif;
 	position: relative;
-	margin: 40px auto;
+	margin:-10px auto 40px auto;
 	width: 870px;
 	background: #ffffff;
-	padding-left: 15px;
+	padding-left: 10px;
 	box-shadow: 0 0.3em 0.8em #000000;
 	color: #000000;
 }
