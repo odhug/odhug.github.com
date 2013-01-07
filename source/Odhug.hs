@@ -1,35 +1,34 @@
-{-# LANGUAGE OverloadedStrings, FlexibleInstances #-}
+{-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE FlexibleInstances #-}
 {-# OPTIONS_GHC -fno-warn-unused-do-bind #-}
-
--- TODO rss feed
-
 --
 -- License     : BSD
 -- Maintainer  : Sergey Bushnyak, sergey.bushnyak@sigrlami.eu
 -- Stability   : experimental
 -- Portability : GHC
 --
---
 -- Entry point for site publishing
 
 module Main where
 
+import Control.Applicative
+import Control.Error
+import Control.Monad
+import Control.Monad.Trans
 import Data.Monoid
 import Data.Maybe
 import Data.Time
 import Data.Time.Format
-import System.Locale
-import Control.Monad
-import Control.Applicative
-import Data.Maybe
-import Control.Monad.Trans
-import Control.Error
-import Text.Printf
 import Hakyll
+import System.Locale
 import Text.JSON
+import Text.Printf
 import qualified Data.Map as Map
+--import CopyImage
 
 ----------------------------------------------------------------------
+
+-- TODO rss feed
 
 posts = do
   posts <- loadAll "posts/*.md"
@@ -103,12 +102,23 @@ main = hakyll $ do
           description <-
             liftM itemBody $
             lift $
-            applyTemplate tmpl (constField "url" "todo" <> constField "date" prettyDate <> constField "datetime" ymdDate <> defaultContext) p
+            applyTemplate tmpl (constField "url" "todo" <> 
+                                constField "date" prettyDate <> 
+                                constField "datetime" ymdDate <> defaultContext) p
           return (date, description)
       loadAndApplyTemplate
         "templates/events.js"
         (constField "events" events)
         =<< makeItem ()
+
+  -- render forum 
+  match "forum.html" $ do
+  route idRoute
+  compile $ makeItem "" >>= 
+            loadAndApplyTemplate "templates/forum.html" 
+            defaultContext >>=
+            loadAndApplyTemplate "templates/default.html"
+            defaultContext
 
 parseDate loc str =
   fromMaybe err $ parseTime defaultTimeLocale "%Y-%m-%d" str
