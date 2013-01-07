@@ -122,6 +122,7 @@ h2 {
 #container-main {
 	margin:-10px auto 40px auto;
 	max-width:980px;
+	min-width: 900px;
 	display:block;
 	padding-top:20px;
 	height: 100%;
