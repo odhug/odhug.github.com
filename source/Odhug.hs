@@ -60,9 +60,7 @@ main = hakyll $ do
       about <- loadBody "about.md";
       makeItem "" >>=
       loadAndApplyTemplate "templates/index.html"
-         (constField "fevents" "" <>
-          constField "pevents" "" <>
-          constField "images"  "" <>
+         (constField "images"  "" <>
           constField "about" about <>
           defaultContext) >>=
       loadAndApplyTemplate

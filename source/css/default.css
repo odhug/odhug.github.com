@@ -105,13 +105,13 @@ header ul li a:hover {
         position: relative;
 }
 
-.pevents {
+#pevents {
 	width: 450px;
         border: 5px solid #ffffff;
 
 }
 
-.fevents {
+#fevents {
 	width: 450px;
         border: 5px solid #ffffff;
         margin-bottom: 10px;
