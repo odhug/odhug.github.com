@@ -17,6 +17,7 @@ import Control.Monad
 import Control.Monad.Trans
 import Data.Monoid
 import Data.Maybe
+import Data.String.Utils (replace)
 import Data.Time
 import Data.Time.Format
 import Hakyll
@@ -44,7 +45,8 @@ images = do
                [ urlField "url" 
                , missingField  -- For better error messages 
                ] 
-  applyTemplateList imgTpl imageCtx images; 
+  images' <- applyTemplateList imgTpl imageCtx images
+  return  $ replace "src= \"/" "src= \"" images'   
 
 main :: IO ()
 main = hakyll $ do
@@ -166,3 +168,4 @@ ourLocale = defaultTimeLocale
     , "ноября"
     , "декабря"
     ]
+
