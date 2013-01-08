@@ -36,6 +36,16 @@ posts = do
   let ctx = defaultContext
   applyTemplateList tmpl ctx $ recentFirst posts
 
+images = do
+  images <- loadAll "images/promo/*";
+  imgTpl <- loadBody "templates/image-item.html";      
+  let imageCtx :: Context CopyFile 
+      imageCtx = mconcat 
+               [ urlField "url" 
+               , missingField  -- For better error messages 
+               ] 
+  applyTemplateList imgTpl imageCtx images; 
+
 main :: IO ()
 main = hakyll $ do
 
@@ -46,9 +56,10 @@ main = hakyll $ do
   match "css/*" $ do
     route idRoute
     compile compressCssCompiler
-  -- render images
-  match "images/*" $ do
-    route   idRoute
+  
+  -- render images  
+  match "images/**" $ do
+    route idRoute
     compile copyFileCompiler
 
   match "about.md" $ compile $ pandocCompiler
@@ -57,10 +68,11 @@ main = hakyll $ do
   create ["index.html"] $ do
     route idRoute
     compile $ do {
-      about <- loadBody "about.md";
+      about  <- loadBody "about.md";
+      images <- images;
       makeItem "" >>=
       loadAndApplyTemplate "templates/index.html"
-         (constField "images"  "" <>
+         (constField "images" images <>
           constField "about" about <>
           defaultContext) >>=
       loadAndApplyTemplate
