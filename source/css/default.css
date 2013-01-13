@@ -1,4 +1,4 @@
-html {
+html, body {
 	font-family: 'PT Serif', serif;
 	background: #f8f8f8;
 	color: #000000;
@@ -32,6 +32,11 @@ header {
 	color: #d7d7d7;
 	font-family: "Arial Black", Gadget, sans-serif;
 	margin-bottom: 20px;
+        margin-top: 0px;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        top:0;
 }
 
 header nav {
@@ -118,7 +123,7 @@ h2 {
 
 /* -------------------------------Footer--------------------------------------------- */
 footer {
-	height: 49px;
+	height: 29px;
 	width: 100%;
 	position: static;
 	background: #122625;
@@ -127,7 +132,7 @@ footer {
 	font-family: "Arial Black", Gadget, sans-serif;
 	clear:both;
               
-        position: fixed;
+        position: static;
         right: 0;
         left: 0;
         z-index: 1030;
