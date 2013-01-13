@@ -26,27 +26,9 @@ import Text.JSON
 import Text.Printf
 import qualified Data.Map as Map
 --import CopyImage
+--import Text.Atom.Feed
 
 ----------------------------------------------------------------------
-
--- TODO rss feed
-
-posts = do
-  posts <- loadAll "posts/*.md"
-  tmpl <- loadBody "templates/post.html"
-  let ctx = defaultContext
-  applyTemplateList tmpl ctx $ recentFirst posts
-
-images = do
-  images <- loadAll "images/promo/*";
-  imgTpl <- loadBody "templates/image-item.html";      
-  let imageCtx :: Context CopyFile 
-      imageCtx = mconcat 
-               [ urlField "url" 
-               , missingField  -- For better error messages 
-               ] 
-  images' <- applyTemplateList imgTpl imageCtx images
-  return  $ replace "src= \"/" "src= \"" images'   
 
 main :: IO ()
 main = hakyll $ do
@@ -137,6 +119,41 @@ main = hakyll $ do
             defaultContext >>=
             loadAndApplyTemplate "templates/default.html"
             defaultContext
+
+  -- rss feed
+  -- create ["feed.rss"] $ do
+  -- route idRoute
+  -- compile $ makeItem "" >>=
+  --           loadAndApllyTemplate "templates/feed.tpl"
+  --           defaultContext
+                      
+
+----------------------------------------------------------------------
+
+posts = do
+  posts <- loadAll "posts/*.md"
+  tmpl <- loadBody "templates/post.html"
+  let ctx = defaultContext
+  applyTemplateList tmpl ctx $ recentFirst posts
+
+images = do
+  images <- loadAll "images/promo/*";
+  imgTpl <- loadBody "templates/image-item.html";      
+  let imageCtx :: Context CopyFile 
+      imageCtx = mconcat 
+               [ urlField "url" 
+               , missingField  -- For better error messages 
+               ] 
+  images' <- applyTemplateList imgTpl imageCtx images
+  return  $ replace "src=\"/" "src=\"./" images'   
+
+-- define number of images in folder promo
+-- calculate css 
+-- restrict number to 10 by default
+--carousel itemsize = do
+--         number = --count of files
+--         -- check if less than restrict number
+--         list  = [itemsize, itemsize*2, .. itemsize*number]
 
 parseDate loc str =
   fromMaybe err $ parseTime defaultTimeLocale "%Y-%m-%d" str
