@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleInstances #-}
+{-# LANGUAGE TypeOperators #-}
 {-# OPTIONS_GHC -fno-warn-unused-do-bind #-}
 --
 -- License     : BSD
@@ -12,7 +13,7 @@
 module Main where
 
 import Control.Applicative
-import Control.Error
+import Control.Error hiding (left)
 import Control.Monad
 import Control.Monad.Trans
 import Data.Monoid
@@ -24,6 +25,8 @@ import Hakyll
 import System.Locale
 import Text.JSON
 import Text.Printf
+import Clay 
+import Prelude hiding (div, span)
 import qualified Data.Map as Map
 --import CopyImage
 --import Text.Atom.Feed
@@ -147,13 +150,33 @@ images = do
   images' <- applyTemplateList imgTpl imageCtx images
   return  $ replace "src=\"/" "src=\"./" images'   
 
--- define number of images in folder promo
--- calculate css 
--- restrict number to 10 by default
---carousel itemsize = do
---         number = --count of files
---         -- check if less than restrict number
---         list  = [itemsize, itemsize*2, .. itemsize*number]
+carouselS :: Css
+carouselS =  ".carousel" 
+             & do
+               border    solid  (px 10)  white
+               boxShadow (em 0) (em 0.3) (em 0.8) black
+               margin    (px 0) auto auto auto
+               padding   (px 0) auto auto auto
+
+--horizontalS :: Integer -> Css
+--horizontalS size = ".horizontal" 
+--              & do
+--                width    (px size) 
+--                position relative
+--                overflow hidden
+
+--hItemS :: Integer -> Css
+--hItemS size = ".horizontal .item"
+--                $ do
+--                  width  (px size)  
+--                  margin 0 auto auto auto;
+--                  float  left;
+
+--hItemsS :: Integer -> Css
+--hItemsS max = ".horizontal .items"
+--              & do
+--                width (px max)
+--                animation hscroll 20s infinite
 
 parseDate loc str =
   fromMaybe err $ parseTime defaultTimeLocale "%Y-%m-%d" str
@@ -163,7 +186,7 @@ formatDate date = formatTime defaultTimeLocale "%Y-%m-%d" date
 
 makeEventList :: [(Day, String)] -> String
 makeEventList events =
-  encode $ flip map events $ \(date, description) ->
+  encode $ flip Prelude.map events $ \(date, description) ->
     toJSObject
       [("eventDescription", description)
       ,("eventDate", formatDate date)]
