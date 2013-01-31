@@ -25,7 +25,7 @@ import Hakyll
 import System.Locale
 import Text.JSON
 import Text.Printf
-import Clay 
+import Clay
 import Prelude hiding (div, span)
 import qualified Data.Map as Map
 --import CopyImage
@@ -43,8 +43,8 @@ main = hakyll $ do
   match "css/*" $ do
     route idRoute
     compile compressCssCompiler
-  
-  -- render images  
+
+  -- render images
   match "images/**" $ do
     route idRoute
     compile copyFileCompiler
@@ -114,11 +114,11 @@ main = hakyll $ do
         (constField "events" events)
         =<< makeItem ()
 
-  -- render forum 
+  -- render forum
   create ["forum.html"] $ do
   route idRoute
-  compile $ makeItem "" >>= 
-            loadAndApplyTemplate "templates/forum.html" 
+  compile $ makeItem "" >>=
+            loadAndApplyTemplate "templates/forum.html"
             defaultContext >>=
             loadAndApplyTemplate "templates/default.html"
             defaultContext
@@ -140,7 +140,7 @@ main = hakyll $ do
   -- compile $ makeItem "" >>=
   --           loadAndApllyTemplate "templates/feed.tpl"
   --           defaultContext
-                      
+
 
 ----------------------------------------------------------------------
 
@@ -160,17 +160,17 @@ posts = do
 
 images = do
   images <- loadAll "images/promo/*";
-  imgTpl <- loadBody "templates/image-item.html";      
-  let imageCtx :: Context CopyFile 
-      imageCtx = mconcat 
-               [ urlField "url" 
-               , missingField  -- For better error messages 
-               ] 
+  imgTpl <- loadBody "templates/image-item.html";
+  let imageCtx :: Context CopyFile
+      imageCtx = mconcat
+               [ urlField "url"
+               , missingField  -- For better error messages
+               ]
   images' <- applyTemplateList imgTpl imageCtx images
-  return  $ replace "src=\"/" "src=\"./" images'   
+  return  $ replace "src=\"/" "src=\"./" images'
 
 carouselS :: Css
-carouselS =  ".carousel" 
+carouselS =  ".carousel"
              & do
                border    solid  (px 10)  white
                boxShadow (em 0) (em 0.3) (em 0.8) black
@@ -178,16 +178,16 @@ carouselS =  ".carousel"
                padding   (px 0) auto auto auto
 
 --horizontalS :: Integer -> Css
---horizontalS size = ".horizontal" 
+--horizontalS size = ".horizontal"
 --              & do
---                width    (px size) 
+--                width    (px size)
 --                position relative
 --                overflow hidden
 
 --hItemS :: Integer -> Css
 --hItemS size = ".horizontal .item"
 --                $ do
---                  width  (px size)  
+--                  width  (px size)
 --                  margin 0 auto auto auto;
 --                  float  left;
 
