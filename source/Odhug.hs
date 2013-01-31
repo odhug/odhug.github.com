@@ -67,8 +67,6 @@ main = hakyll $ do
         defaultContext
     }
 
-  match "posts/*" $ compile pandocCompiler
-
   create ["blog.html"] $ do
     route idRoute
     compile $ do {
@@ -91,7 +89,7 @@ main = hakyll $ do
   create ["events.js"] $ do
     route idRoute
     compile $ do
-      posts <- loadAll "posts/*.md"
+      posts <- loadAll (noVersion "posts/*.md")
       tmpl <- loadBody "templates/eventDescription.tmpl"
       events <-
         liftM (makeEventList . catMaybes) $ forM posts $ \p -> runMaybeT $ do
@@ -102,11 +100,13 @@ main = hakyll $ do
             date = parseDate (itemIdentifier p) dateStr
             prettyDate = formatTime ourLocale "%-d %B %Y" date
             ymdDate = formatDate date
+          url <-
+            lift $ postUrl p
           description <-
             liftM itemBody $
             lift $
-            applyTemplate tmpl (constField "url" "todo" <> 
-                                constField "date" prettyDate <> 
+            applyTemplate tmpl (constField "url" url <>
+                                constField "date" prettyDate <>
                                 constField "datetime" ymdDate <> defaultContext) p
           return (date, description)
       loadAndApplyTemplate
@@ -123,6 +123,17 @@ main = hakyll $ do
             loadAndApplyTemplate "templates/default.html"
             defaultContext
 
+  match "posts/*.md" $ version "pandoc" $
+    compile pandocCompiler
+
+  match "posts/*.md" $ do
+    route $ setExtension "html"
+    compile $ do
+      i <- getUnderlying
+      html <- load $ setVersion (Just "pandoc") i
+      loadAndApplyTemplate "templates/default.html" defaultContext =<<
+        loadAndApplyTemplate "templates/post.html" (postUrlCtx <> defaultContext) =<<
+        return html { itemIdentifier = i }
   -- rss feed
   -- create ["feed.rss"] $ do
   -- route idRoute
@@ -133,10 +144,18 @@ main = hakyll $ do
 
 ----------------------------------------------------------------------
 
+postUrl p =
+  fmap (maybe "" toUrl) .
+  getRoute .
+  setVersion Nothing $
+  itemIdentifier p
+
+postUrlCtx = field "postUrl" postUrl
+
 posts = do
-  posts <- loadAll "posts/*.md"
+  posts <- loadAll ("posts/*.md" `withVersion` "pandoc")
   tmpl <- loadBody "templates/post.html"
-  let ctx = defaultContext
+  let ctx = postUrlCtx <> defaultContext
   applyTemplateList tmpl ctx $ recentFirst posts
 
 images = do
