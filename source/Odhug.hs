@@ -49,6 +49,10 @@ main = hakyll $ do
     route idRoute
     compile copyFileCompiler
 
+  match "js/**" $ do
+    route idRoute
+    compile copyFileCompiler
+
   match "about.md" $ compile $ pandocCompiler
 
   -- render index page
@@ -110,7 +114,7 @@ main = hakyll $ do
                                 constField "datetime" ymdDate <> defaultContext) p
           return (date, description)
       loadAndApplyTemplate
-        "templates/events.js"
+        "templates/events-js.tpl"
         (constField "events" events)
         =<< makeItem ()
 
@@ -158,12 +162,12 @@ carouselS =  ".carousel"
                margin    (px 0) auto auto auto
                padding   (px 0) auto auto auto
 
---horizontalS :: Integer -> Css
---horizontalS size = ".horizontal" 
---              & do
---                width    (px size) 
---                position relative
---                overflow hidden
+horizontalS :: Integer -> Css
+horizontalS size = ".horizontal" 
+              & do
+                width    (px size) 
+                position relative
+                overflow hidden
 
 --hItemS :: Integer -> Css
 --hItemS size = ".horizontal .item"
