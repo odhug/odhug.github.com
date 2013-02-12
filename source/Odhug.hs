@@ -73,26 +73,18 @@ main = hakyll $ do
     route idRoute
     compile $ do {
       posts <- posts;
-
-      makeItem "" >>=
-
-      loadAndApplyTemplate "templates/posts.html"
-        (constField "posts" posts <> defaultContext) >>=
-
-      loadAndApplyTemplate "templates/default.html"
-        defaultContext
+      makeItem "" 
+      >>= loadAndApplyTemplate "templates/posts.html"
+          (constField "posts" posts <> defaultContext) 
+      >>= loadAndApplyTemplate "templates/default.html"
+          defaultContext
     }
 
-  {-
-  match "posts/*.md" $ do
-    route $ setExtension "html"
-    compile $ pandocCompiler >>= loadAndApplyTemplate "templates/default.html" defaultContext
-  -}
-  create ["events.js"] $ do
+  create ["js/events.js"] $ do
     route idRoute
     compile $ do
       posts <- loadAll ("posts/*.md" .&&. hasNoVersion)
-      tmpl <- loadBody "templates/eventDescription.tmpl"
+      tmpl <- loadBody "templates/eventDescription.tpl"
       events <-
         liftM (makeEventList . catMaybes) $ forM posts $ \p -> runMaybeT $ do
           mdata <- lift $ getMetadata $ itemIdentifier p

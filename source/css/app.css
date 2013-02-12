@@ -49,5 +49,20 @@
     text-align: center;
 }
 
+.article {
+	padding-right: 10px;
+	padding-top: 2px;
+	border-bottom: 8px solid rgba(63,148,148, 0.1);
+}
+
+.article:last-child {
+	border-bottom: none;
+	padding-bottom: 8px;
+}
+
+.article-header {
+	font-size: 24px;
+	font-weight: bold;
+}
 
 
