@@ -173,15 +173,15 @@ images = do
   images' <- applyTemplateList imgTpl imageCtx images
   return  $ replace "src=\"/" "src=\"./" images'
 
-carouselS :: Css
-carouselS =  ".carousel"
-             & do
-               border    solid  (px 10)  white
-               boxShadow (em 0) (em 0.3) (em 0.8) black
-               margin    (px 0) auto auto auto
-               padding   (px 0) auto auto auto
+--carouselS :: Css
+--carouselS =  ".carousel"
+--             & do
+--               border    solid  (px 10)  white
+--               boxShadow (em 0) (em 0.3) (em 0.8) black
+--               margin    (px 0) auto auto auto
+--               padding   (px 0) auto auto auto
 
-horizontalS :: Integer -> Css
+--horizontalS :: Integer -> Css
 --horizontalS size = ".horizontal"
 --              & do
 --                width    (px size)
