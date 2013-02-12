@@ -28,8 +28,6 @@ import Text.Printf
 import Clay
 import Prelude hiding (div, span)
 import qualified Data.Map as Map
---import CopyImage
---import Text.Atom.Feed
 
 ----------------------------------------------------------------------
 
@@ -93,7 +91,7 @@ main = hakyll $ do
   create ["events.js"] $ do
     route idRoute
     compile $ do
-      posts <- loadAll (noVersion "posts/*.md")
+      posts <- loadAll ("posts/*.md" .&&. hasNoVersion)
       tmpl <- loadBody "templates/eventDescription.tmpl"
       events <-
         liftM (makeEventList . catMaybes) $ forM posts $ \p -> runMaybeT $ do
@@ -157,7 +155,7 @@ postUrl p =
 postUrlCtx = field "postUrl" postUrl
 
 posts = do
-  posts <- loadAll ("posts/*.md" `withVersion` "pandoc")
+  posts <- loadAll ("posts/*.md" .&&. hasVersion "pandoc")
   tmpl <- loadBody "templates/post.html"
   let ctx = postUrlCtx <> defaultContext
   applyTemplateList tmpl ctx $ recentFirst posts
