@@ -76,7 +76,7 @@ main = hakyll $ do
       loadAndApplyTemplate
         "templates/default.html"
         defaultContext
-       >>= relativizeUrls
+      >>= relativizeUrls
     }
 
   create ["blog.html"] $ do
