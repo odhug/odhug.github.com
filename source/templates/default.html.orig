@@ -15,6 +15,7 @@
     <script src="js/bootstrap.min.js"></script>    
     <script src="events.js"></script>
 
+<<<<<<< HEAD
     <script type="text/javascript">
       $(function(){
       $('.carousel').carousel();});
@@ -23,7 +24,7 @@
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner" >
+      <div class="navbar-inner">
         <div class="container">
           <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
             <span class="icon-bar"></span>
@@ -50,10 +51,36 @@
     $body$
     <div class="navbar navbar-inverse navbar-fixed-bottom">
       <div class="navbar-inner">
-        <div class="info">
-          <p>Разработано с помощью Haskell, <a href="http://jaspervdj.be/hakyll/">Hakyll</a> и <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> </p>
+        <div class="container">
+          <p>Разработано с помощью Haskell и <a href="http://jaspervdj.be/hakyll/">Hakyll</a> </p>
         </div>
       </div>
     </div>
   </body>
+=======
+		<title>OdHUG - официальный сайт</title>
+		<link rel="shortcut icon" href="/images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="/css/blog.css" />
+		<link rel="stylesheet" type="text/css" href="/css/article.css" />
+		<link rel="alternate" type="application/rss+xml" title="OdHUG" href="/rss.xml" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Serif&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="/js/modernizr.custom.04022.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<ul class="inds">
+					<li><a href="/index.html">Главная</a></li>
+					<li><a href="/blog.html">Блог</a></li>
+					<li><a href="/forum.html">Форум</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		$body$
+
+		<footer><p>Разработано с помощью Haskell и <a href="http://jaspervdj.be/hakyll/">Hakyll</a> </p></footer>
+	</body>
+>>>>>>> e74f9a43db37cc2f7f053b569c6d902790f47e17
 </html>
