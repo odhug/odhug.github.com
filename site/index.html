@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>OdHUG - официальный сайт</title>
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
+    <link rel="alternate" type="application/rss+xml" title="OdHUG" href="./rss.xml" />
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/events.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+      $('.carousel').carousel();});
+    </script>
+    
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar" type="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="./index.html" class="brand">OdHUG</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a href="./index.html">Главная</a>
+              </li>
+              <li class>
+                <a href="blog.html">Блог</a>
+              </li>
+              <li class>
+                <a href="forum.html">Форум</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container-main" class="container-fluid">
+  <div class="row">
+    <div class="span4">
+      <h2>Предстоящие события</h2>
+      <div id="fevents"></div>
+      <h2>Последнее событие</h2>
+      <div id="pevents"></div>
+      <h2>О нас</h2>
+      <p>Одесская группа пользователей <a href="http://www.haskell.org/">Haskell</a> (OdHUG) была основана в мае 2012 года.</p>
+<p>Мы встречаемся примерно раз в месяц в неформальной обстановке и общаемся на любые темы, как-либо связанные с языком Haskell.</p>
+<p>Время от времени мы также проводим встречи с докладами, <a href="http://ro-che.info/haskell/">лекции</a>, <a href="http://www.haskell.org/haskellwiki/OdHac">хакатоны</a>.</p>
+<p>На наших встречах мы рады видеть как опытных хаскеллистов, так и людей, которые только собираются приступить к изучению этого интересного языка.</p>
+    </div>
+    <div class="span5">
+      <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="item">
+  <img alt src="./images/promo/promo-four.jpg">
+  <div class="carousel-caption">
+  </div>
+</div>
+<div class="item">
+  <img alt src="./images/promo/promo-one.jpg">
+  <div class="carousel-caption">
+  </div>
+</div>
+<div class="item">
+  <img alt src="./images/promo/promo-three.jpg">
+  <div class="carousel-caption">
+  </div>
+</div>
+<div class="item">
+  <img alt src="./images/promo/promo-two.jpg">
+  <div class="carousel-caption">
+  </div>
+</div>
+
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+      <div class="navbar-inner">
+        <div class="info">
+          <p>Разработано с помощью Haskell, <a href="http://jaspervdj.be/hakyll/">Hakyll</a> и <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
