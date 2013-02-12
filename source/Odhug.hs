@@ -34,15 +34,12 @@ import qualified Data.Map as Map
 main :: IO ()
 main = hakyll $ do
 
-  -- Read templates
   match "templates/*" $ compile templateCompiler
 
-  -- render css files
   match "css/*" $ do
     route idRoute
-    compile compressCssCompiler
+    compile $ compressCssCompiler
 
-  -- render images
   match "images/**" $ do
     route idRoute
     compile copyFileCompiler
@@ -53,7 +50,19 @@ main = hakyll $ do
 
   match "about.md" $ compile $ pandocCompiler
 
-  -- render index page
+  match "posts/*.md" $ version "pandoc" $
+    compile $ pandocCompiler
+
+  match "posts/*.md" $ do
+    route $ setExtension "html"
+    compile $ do
+      i <- getUnderlying
+      html <- load $ setVersion (Just "pandoc") i   
+      (return html { itemIdentifier = i })
+      >>= loadAndApplyTemplate "templates/post.html" (postUrlCtx <> defaultContext)
+      >>= loadAndApplyTemplate "templates/indefault.html" defaultContext   
+      >>= relativizeUrls  
+
   create ["index.html"] $ do
     route idRoute
     compile $ do {
@@ -67,24 +76,26 @@ main = hakyll $ do
       loadAndApplyTemplate
         "templates/default.html"
         defaultContext
+       >>= relativizeUrls
     }
 
   create ["blog.html"] $ do
     route idRoute
     compile $ do {
       posts <- posts;
-      makeItem "" 
-      >>= loadAndApplyTemplate "templates/posts.html"
-          (constField "posts" posts <> defaultContext) 
-      >>= loadAndApplyTemplate "templates/default.html"
-          defaultContext
+      makeItem "" >>= 
+      loadAndApplyTemplate "templates/posts.html"
+        (constField "posts" posts <> defaultContext)  >>=
+      loadAndApplyTemplate "templates/default.html"
+        defaultContext
+       >>= relativizeUrls
     }
 
   create ["js/events.js"] $ do
     route idRoute
     compile $ do
       posts <- loadAll ("posts/*.md" .&&. hasNoVersion)
-      tmpl <- loadBody "templates/eventDescription.tpl"
+      tmpl <- loadBody "templates/event.tpl"
       events <-
         liftM (makeEventList . catMaybes) $ forM posts $ \p -> runMaybeT $ do
           mdata <- lift $ getMetadata $ itemIdentifier p
@@ -104,7 +115,7 @@ main = hakyll $ do
                                 constField "datetime" ymdDate <> defaultContext) p
           return (date, description)
       loadAndApplyTemplate
-        "templates/events-js.tpl"
+        "templates/events.tpl"
         (constField "events" events)
         =<< makeItem ()
 
@@ -117,17 +128,6 @@ main = hakyll $ do
             loadAndApplyTemplate "templates/default.html"
             defaultContext
 
-  match "posts/*.md" $ version "pandoc" $
-    compile pandocCompiler
-
-  match "posts/*.md" $ do
-    route $ setExtension "html"
-    compile $ do
-      i <- getUnderlying
-      html <- load $ setVersion (Just "pandoc") i
-      loadAndApplyTemplate "templates/default.html" defaultContext =<<
-        loadAndApplyTemplate "templates/post.html" (postUrlCtx <> defaultContext) =<<
-        return html { itemIdentifier = i }
   -- rss feed
   -- create ["feed.rss"] $ do
   -- route idRoute
@@ -148,7 +148,7 @@ postUrlCtx = field "postUrl" postUrl
 
 posts = do
   posts <- loadAll ("posts/*.md" .&&. hasVersion "pandoc")
-  tmpl <- loadBody "templates/post.html"
+  tmpl <- loadBody "templates/post-item.html"
   let ctx = postUrlCtx <> defaultContext
   applyTemplateList tmpl ctx $ recentFirst posts
 
@@ -162,34 +162,6 @@ images = do
                ]
   images' <- applyTemplateList imgTpl imageCtx images
   return  $ replace "src=\"/" "src=\"./" images'
-
---carouselS :: Css
---carouselS =  ".carousel"
---             & do
---               border    solid  (px 10)  white
---               boxShadow (em 0) (em 0.3) (em 0.8) black
---               margin    (px 0) auto auto auto
---               padding   (px 0) auto auto auto
-
---horizontalS :: Integer -> Css
---horizontalS size = ".horizontal"
---              & do
---                width    (px size)
---                position relative
---                overflow hidden
-
---hItemS :: Integer -> Css
---hItemS size = ".horizontal .item"
---                $ do
---                  width  (px size)
---                  margin 0 auto auto auto;
---                  float  left;
-
---hItemsS :: Integer -> Css
---hItemsS max = ".horizontal .items"
---              & do
---                width (px max)
---                animation hscroll 20s infinite
 
 parseDate loc str =
   fromMaybe err $ parseTime defaultTimeLocale "%Y-%m-%d" str
