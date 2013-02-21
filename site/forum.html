@@ -20,6 +20,19 @@
       $('.carousel').carousel();});
     </script>
     
+    <script type="text/javascript">
+      $(function() {
+var a, b, c, d, e;
+d = $(".nav a"), e = [];
+for (b = 0, c = d.length; b < c; b++)
+a = d[b], e.push(function(a) {
+if (window.location.pathname === a.pathname)
+return $(a).parent().toggleClass("active")
+}(a));
+return e
+});
+    </script>
+    
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -30,11 +43,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="./index.html" class="brand">OdHUG</a>
+          <a href="index.html" class="brand">OdHUG</a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="./index.html">Главная</a>
+            <ul class="nav nav-pills">
+              <li class="">
+                <a href="index.html">Главная</a>
               </li>
               <li class="">
                 <a href="blog.html">Блог</a>
