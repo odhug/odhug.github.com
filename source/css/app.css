@@ -4,12 +4,6 @@
     display:block;
 }
 
-h1 {
-
-    color: black;
-    text-decoration:none;
-}
-
 #container-feed, #forum {
     position: relative;
     margin: 40px auto 40px auto;
@@ -33,6 +27,12 @@ h1 {
     padding-right: 10px;
     padding-top: 2px;
     border-bottom: 8px solid rgba(63,148,148, 0.1);
+}
+
+.post h1 a {
+
+    color: black;
+    text-decoration:none;
 }
 
 .post:last-child {

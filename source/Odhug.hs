@@ -63,6 +63,7 @@ main = hakyll $ do
       return html { itemIdentifier = item }
         >>= loadAndApplyTemplate "templates/post.html" ( postUrlCtx <> defaultContext)
         >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= relativizeUrls
 
   create ["index.html"] $ do
     route idRoute
@@ -98,6 +99,7 @@ main = hakyll $ do
   compile $ makeItem ""
     >>= loadAndApplyTemplate "templates/forum.html" defaultContext
     >>= loadAndApplyTemplate "templates/default.html" defaultContext
+    >>= relativizeUrls
 
 ----------------------------------------------------------------------
 
