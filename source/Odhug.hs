@@ -62,7 +62,7 @@ main = hakyll $ do
       html <- load $ setVersion (Just "pandoc") item
       return html { itemIdentifier = item }
         >>= loadAndApplyTemplate "templates/post.html" ( postUrlCtx <> defaultContext)
-        >>= loadAndApplyTemplate "templates/indefault.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" defaultContext
 
   create ["index.html"] $ do
     route idRoute

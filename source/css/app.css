@@ -4,6 +4,12 @@
     display:block;
 }
 
+h1 {
+
+    color: black;
+    text-decoration:none;
+}
+
 #container-feed, #forum {
     position: relative;
     margin: 40px auto 40px auto;
