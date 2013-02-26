@@ -139,6 +139,7 @@ loadEvents posts tmpl = do
       applyTemplate tmpl ( constField "url" url <>
                            constField "date" prettyDate <>
                            constField "datetime" ymdDate <> defaultContext) item
+      >>= relativizeUrls 
     return (date, description)
 
 makeEventList events =
