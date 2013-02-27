@@ -142,6 +142,7 @@ loadEvents posts tmpl = do
       >>= relativizeUrls 
     return (date, description)
 
+makeEventList :: [(Day, String)] -> String
 makeEventList events =
   encode $ flip Prelude.map events $ \(date, description) ->
     toJSObject
