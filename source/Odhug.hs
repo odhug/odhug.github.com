@@ -141,7 +141,7 @@ loadEvents posts tmpl = do
                            constField "datetime" ymdDate <> defaultContext) item
       -- NB: this relativizeUrlsWith call relies on the fact that we only
       -- show URLs at the root
-      >>= return . fmap (relativizeUrlsWith "")
+      >>= return . fmap (relativizeUrlsWith ".")
     return (date, description)
 
 makeEventList :: [(Day, String)] -> String
