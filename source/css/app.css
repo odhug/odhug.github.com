@@ -13,7 +13,7 @@ h1 {
     margin: 40px auto 40px auto;
     width: 870px;
     background: #ffffff;
-    color: #000000;
+    color: #333333;
 }
 
 #forum {
@@ -35,7 +35,7 @@ h1 {
 
 .post h1 a {
 
-    color: black;
+    color: #333333;
     text-decoration:none;
 }
 
