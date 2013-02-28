@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Odessa Haskell User Group</title>
+        <link>http://odhug.github.com/site</link>
+        <description><![CDATA[OdHUG news and announcements]]></description>
+        <atom:link href="http://odhug.github.com/site/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Tue, 18 Sep 2012 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>Курс по Haskell</title>
+    <link>http://odhug.github.com/site/posts/2012-09-18-onuhs-announce.html</link>
+    <description><![CDATA[<p>Как я уже объявлял на последней встрече, я буду читать курс по Haskell в Одесском университете. Занятия будут проходить по субботам, ориентировочно с 10.30 до 12.30, в здании мехмата на Дворянской.</p>
+<p>Если есть желание посещать, напишите мне.</p>]]></description>
+    <pubDate>Tue, 18 Sep 2012 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2012-09-18-onuhs-announce.html</guid>
+</item>
+<item>
+    <title>Октябрьская встреча</title>
+    <link>http://odhug.github.com/site/posts/2012-10-02-announce.html</link>
+    <description><![CDATA[<p>Очередная встреча OdHUG состоится в этот четверг, 4 октября. Приношу извинения за столь позднее объявление.</p>
+<p>Координаты те же: Алхимия (Дерибасовская, 8), 19.00.</p>
+<p><em>Просьба отписаться мне на почту, если вы собираетесь прийти.</em></p>
+<p>В программе:</p>
+<ul>
+<li>делимся впечатлениями от лекций</li>
+<li>я поделюсь впечатлениями с ICFP и расскажу, как в Haskell протаскивают зависимые типы</li>
+<li>если повезет, Сережа расскажет нам о прогрессе своего проекта software-defined radio</li>
+</ul>]]></description>
+    <pubDate>Tue, 02 Oct 2012 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2012-10-02-announce.html</guid>
+</item>
+<item>
+    <title>Ноябрьская встреча</title>
+    <link>http://odhug.github.com/site/posts/2012-11-06-announce.html</link>
+    <description><![CDATA[<p>Послезавтра, 8.11, состоится очередная встреча OdHUG.</p>
+<p>Условия те же — 19.00, Алхимия.</p>
+<p>Регистрация мне на почту.</p>
+<p>В прошлый раз кто-то спрашивал про записи (records) в Haskell — постараюсь рассказать подробнее.</p>
+<p>Подумайте, что бы вам было интересно рассказать или обсудить.</p>
+<p>Кстати, если кто пишет на Haskell в vim — я давеча написал маленький, но полезный плагин https://github.com/feuerbach/vim-hs-module-name</p>]]></description>
+    <pubDate>Tue, 06 Nov 2012 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2012-11-06-announce.html</guid>
+</item>
+<item>
+    <title>Декабрьская встреча</title>
+    <link>http://odhug.github.com/site/posts/2012-12-13-announce.html</link>
+    <description><![CDATA[<p>Последняя встреча в этом году состоится в это воскресенье, 16.12, в 14.00.</p>
+<p>Эксперимента ради, проведем ее в Циферблате (пер. Вице-Адмирала Жукова 3/7, между Греческой и Дерибасовской). http://vk.com/clockfaceodessa</p>
+<p>Как обычно, будем общаться на разные околохаскельные темы. Плюс, я сделаю один интересный анонс :)</p>]]></description>
+    <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2012-12-13-announce.html</guid>
+</item>
+<item>
+    <title>Январская встреча</title>
+    <link>http://odhug.github.com/site/posts/2013-01-06-announce.html</link>
+    <description><![CDATA[<p>Первая встреча в этом году состоится в следующий четверг, 19 января, в Циферблате, в 19.00.</p>
+<p>В программе:</p>
+<ul>
+<li><p>презентация сайта OdHUG</p></li>
+<li><p>пользуясь случаем, можно обсудить Hakyll — генератор сайтов на Haskell, с помощью которого и построен наш сайт</p></li>
+<li><p>узнаем, что такое торсоры и зачем они нужны</p></li>
+<li><p>порассуждаем о проблемах pretty-printing’а</p></li>
+<li><p>поделимся друг с другом последними достижениями и дальнейшими творческими планами :)</p></li>
+</ul>]]></description>
+    <pubDate>Sun, 06 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2013-01-06-announce.html</guid>
+</item>
+<item>
+    <title>Февральская встреча</title>
+    <link>http://odhug.github.com/site/posts/2013-01-31-announce.html</link>
+    <description><![CDATA[<p>В ближайшую среду, 6 февраля, состоится очередная встреча OdHug!</p>
+<p>По традиции, соберемся в Циферблате и перетрем последние хаскельные сплетни :)</p>
+<p>Время: <strong>19.00</strong>.</p>
+<p>Обратите внимание, что мы, возможно, будем в подвальном этаже. А может и нет.</p>
+<p>Регистрация мне <script type="text/javascript">
+<!--
+h='&#114;&#x6f;&#x2d;&#x63;&#104;&#x65;&#46;&#x69;&#110;&#102;&#x6f;';a='&#64;';n='&#114;&#x6f;&#x6d;&#x61;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'на почту'+'<\/'+'a'+'>');
+// -->
+</script><noscript>&#x43d;&#1072;&#32;&#x43f;&#1086;&#x447;&#1090;&#x443;&#32;&#40;&#114;&#x6f;&#x6d;&#x61;&#32;&#x61;&#116;&#32;&#114;&#x6f;&#x2d;&#x63;&#104;&#x65;&#32;&#100;&#x6f;&#116;&#32;&#x69;&#110;&#102;&#x6f;&#x29;</noscript>, пожалуйста.</p>]]></description>
+    <pubDate>Thu, 31 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2013-01-31-announce.html</guid>
+</item>
+
+    </channel> 
+</rss>
