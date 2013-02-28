@@ -101,6 +101,13 @@ main = hakyll $ do
     >>= loadAndApplyTemplate "templates/default.html" defaultContext
     >>= relativizeUrls
 
+  create ["rss.xml"] $ do
+    route idRoute
+    let descContext = field "description" (return . itemBody)
+    compile $
+      loadAll ("posts/*.md" .&&. hasVersion "pandoc") >>=
+      renderRss feedConf (field "url" postUrl <> descContext <> defaultContext)
+
 ----------------------------------------------------------------------
 
 postUrl item = fmap (maybe "" toUrl) . getRoute . setVersion Nothing $ itemIdentifier item
@@ -175,3 +182,11 @@ ourLocale = defaultTimeLocale
     , "ноября"
     , "декабря"
     ]
+
+feedConf = FeedConfiguration
+  { feedTitle = "Odessa Haskell User Group"
+  , feedDescription = "OdHUG news and announcements"
+  , feedAuthorName = "OdHUG"
+  , feedAuthorEmail = ""
+  , feedRoot = "http://odhug.github.com/site"
+  }
