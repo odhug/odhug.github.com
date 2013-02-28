@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -eu
+
+rm -rf site
+cp -r source/_site site
+git add -A site
+git diff --cached
+
+echo "Commit?"
+select yn in "Yes" "No"; do
+  case $yn in
+    Yes ) git commit -m "Update site"; exit;;
+    No ) git reset; exit;;
+  esac
+done
