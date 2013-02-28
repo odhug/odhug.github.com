@@ -110,11 +110,14 @@ main = hakyll $ do
 
 ----------------------------------------------------------------------
 
+postUrl :: Item a -> Compiler String
 postUrl item = fmap (maybe "" toUrl) . getRoute . setVersion Nothing $ itemIdentifier item
   
-postUrlCtx =  field "postUrl" postUrl
+postUrlCtx :: Context a
+postUrlCtx = field "postUrl" postUrl
   
 -- generate posts list to use in blog page
+posts :: Compiler String
 posts = do
   posts <- loadAll ("posts/*.md" .&&. hasVersion "pandoc")
   tmpl  <- loadBody "templates/post-item.html"
