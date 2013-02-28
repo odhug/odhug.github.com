@@ -29,6 +29,7 @@ import Text.JSON
 import Text.Printf
 import Data.List (isPrefixOf)
 import Prelude hiding (div, span)
+import Text.Pandoc.Options
 
 ----------------------------------------------------------------------
 
@@ -49,11 +50,11 @@ main = hakyll $ do
     route idRoute
     compile copyFileCompiler
 
-  match "about.md" $ compile $ pandocCompiler
+  match "about.md" $ compile $ ourPandocCompiler
 
   match "posts/*.md" $
     version "pandoc" $
-    compile pandocCompiler
+    compile ourPandocCompiler
 
   match "posts/*.md" $ do
     route   $ setExtension "html"
@@ -193,3 +194,9 @@ feedConf = FeedConfiguration
   , feedAuthorEmail = ""
   , feedRoot = "http://odhug.github.com/site"
   }
+
+ourPandocCompiler =
+  pandocCompilerWith
+    defaultHakyllReaderOptions
+    defaultHakyllWriterOptions
+      { writerEmailObfuscation = NoObfuscation }
