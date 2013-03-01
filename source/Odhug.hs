@@ -132,8 +132,10 @@ images = do
                [ urlField "url" 
                , missingField  -- For better error messages
                ]
-  images' <- applyTemplateList imgTpl imageCtx images
-  return  $ replace "src=\"/" "src=\"./" images'
+  aimage  <- applyTemplate     imgTpl imageCtx $ head images
+  images' <- applyTemplateList imgTpl imageCtx $ tail images
+  return $ replace "src=\"/" "src=\"./"
+         $ (replace "item" "active item" $ itemBody aimage) ++ images'
 
 loadEvents :: [Item String] -> Template -> Compiler String
 loadEvents posts tmpl = do
