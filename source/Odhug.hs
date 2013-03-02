@@ -25,6 +25,7 @@ import Data.Time
 import Data.Time.Format
 import Hakyll
 import System.Locale
+import System.FilePath (takeBaseName)
 import Text.JSON
 import Text.Printf
 import Data.List (isPrefixOf)
@@ -63,7 +64,7 @@ main = hakyll $ do
       html <- load $ setVersion (Just "pandoc") item
       return html { itemIdentifier = item }
         >>= loadAndApplyTemplate "templates/post.html" ( postUrlCtx <> defaultContext)
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" ( titleCtx <> defaultContext)
         >>= relativizeUrls
 
   create ["index.html"] $ do
@@ -74,7 +75,7 @@ main = hakyll $ do
       makeItem ""
         >>= loadAndApplyTemplate "templates/index.html"
           (constField "images" images <> constField "about" about <> defaultContext) 
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" (constField "title" tIndex <> defaultContext)
         >>= relativizeUrls
 
   create ["blog.html"] $ do
@@ -83,7 +84,7 @@ main = hakyll $ do
       posts <- posts
       makeItem ""
         >>= loadAndApplyTemplate "templates/posts.html" (constField "posts" posts <> defaultContext)
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html" (constField "title" tBlog <> defaultContext)
         >>= relativizeUrls
 
   create ["js/events.js"] $ do
@@ -99,7 +100,7 @@ main = hakyll $ do
   route idRoute
   compile $ makeItem ""
     >>= loadAndApplyTemplate "templates/forum.html" defaultContext
-    >>= loadAndApplyTemplate "templates/default.html" defaultContext
+    >>= loadAndApplyTemplate "templates/default.html" (constField "title" tForum <> defaultContext)
     >>= relativizeUrls
 
   create ["rss.xml"] $ do
@@ -113,10 +114,18 @@ main = hakyll $ do
 
 postUrl :: Item a -> Compiler String
 postUrl item = fmap (maybe "" toUrl) . getRoute . setVersion Nothing $ itemIdentifier item
-  
+
 postUrlCtx :: Context a
 postUrlCtx = field "postUrl" postUrl
-  
+
+titleCtx :: Context a
+titleCtx = field "title" $ \item -> do
+        metadata <- getMetadata $ itemIdentifier item
+        let title =  case Map.lookup "title" metadata of
+              Just value -> "OdHUG - " ++ value
+              Nothing    -> []
+        return title
+
 -- generate posts list to use in blog page
 posts :: Compiler String
 posts = do
@@ -202,3 +211,8 @@ ourPandocCompiler =
     defaultHakyllReaderOptions
     defaultHakyllWriterOptions
       { writerEmailObfuscation = NoObfuscation }
+
+tIndex = "OdHUG - Официальный сайт"
+tBlog  = "OdHUG - Официальный блог"
+tForum = "OdHUG - Официальный форум"
+
