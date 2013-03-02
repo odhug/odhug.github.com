@@ -63,8 +63,10 @@ main = hakyll $ do
       item <- getUnderlying
       html <- load $ setVersion (Just "pandoc") item
       return html { itemIdentifier = item }
-        >>= loadAndApplyTemplate "templates/post.html" ( postUrlCtx <> defaultContext)
-        >>= loadAndApplyTemplate "templates/default.html" ( titleCtx <> defaultContext)
+        >>= loadAndApplyTemplate "templates/post.html"
+        ( postUrlCtx <> defaultContext)
+        >>= loadAndApplyTemplate "templates/default.html"
+        ( titleCtx <> defaultContext)
         >>= relativizeUrls
 
   create ["index.html"] $ do
@@ -75,7 +77,8 @@ main = hakyll $ do
       makeItem ""
         >>= loadAndApplyTemplate "templates/index.html"
           (constField "images" images <> constField "about" about <> defaultContext) 
-        >>= loadAndApplyTemplate "templates/default.html" (constField "title" tIndex <> defaultContext)
+        >>= loadAndApplyTemplate "templates/default.html"
+          (constField "title" tIndex <> defaultContext)
         >>= relativizeUrls
 
   create ["blog.html"] $ do
@@ -83,8 +86,10 @@ main = hakyll $ do
     compile $ do 
       posts <- posts
       makeItem ""
-        >>= loadAndApplyTemplate "templates/posts.html" (constField "posts" posts <> defaultContext)
-        >>= loadAndApplyTemplate "templates/default.html" (constField "title" tBlog <> defaultContext)
+        >>= loadAndApplyTemplate "templates/posts.html"
+        (constField "posts" posts <> defaultContext)
+        >>= loadAndApplyTemplate "templates/default.html"
+        (constField "title" tBlog <> defaultContext)
         >>= relativizeUrls
 
   create ["js/events.js"] $ do
@@ -100,7 +105,8 @@ main = hakyll $ do
   route idRoute
   compile $ makeItem ""
     >>= loadAndApplyTemplate "templates/forum.html" defaultContext
-    >>= loadAndApplyTemplate "templates/default.html" (constField "title" tForum <> defaultContext)
+    >>= loadAndApplyTemplate "templates/default.html"
+    (constField "title" tForum <> defaultContext)
     >>= relativizeUrls
 
   create ["rss.xml"] $ do
