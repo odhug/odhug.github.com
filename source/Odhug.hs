@@ -25,7 +25,6 @@ import Data.Time
 import Data.Time.Format
 import Hakyll
 import System.Locale
-import System.FilePath (takeBaseName)
 import Text.JSON
 import Text.Printf
 import Data.List (isPrefixOf)
