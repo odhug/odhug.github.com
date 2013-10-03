@@ -136,7 +136,7 @@ posts :: Compiler String
 posts = do
   posts <- loadAll ("posts/*.md" .&&. hasVersion "pandoc")
   tmpl  <- loadBody "templates/post-item.html"
-  applyTemplateList tmpl (postUrlCtx <> defaultContext) $ recentFirst posts
+  applyTemplateList tmpl (postUrlCtx <> defaultContext) =<< recentFirst posts
 
 images = do
   images <- loadAll "images/promo/*";
