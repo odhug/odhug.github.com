@@ -2,6 +2,10 @@ h1 {
   font-size: 31.5px;
 }
 
+h2 {
+  font-size: 22px;
+}
+
 #container-main {
     margin:40px auto 40px auto;
     width:870px;
