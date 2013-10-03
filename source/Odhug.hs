@@ -217,7 +217,7 @@ ourPandocCompiler =
     defaultHakyllWriterOptions
       { writerEmailObfuscation = NoObfuscation }
 
-tIndex = "OdHUG - Официальный сайт"
-tBlog  = "OdHUG - Официальный блог"
-tForum = "OdHUG - Официальный форум"
+tIndex = "OdHUG"
+tBlog  = "OdHUG — блог"
+tForum = "OdHUG — форум"
 
