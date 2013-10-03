@@ -153,6 +153,26 @@
     <pubDate>Mon, 16 Sep 2013 00:00:00 UT</pubDate>
     <guid>http://odhug.github.com/site/posts/2013-09-16-announce.html</guid>
 </item>
+<item>
+    <title>Haskell: знакомство с экосистемой</title>
+    <link>http://odhug.github.com/site/posts/2013-10-03-announce.html</link>
+    <description><![CDATA[<p><a href="http://odhug.github.io/">Одесская группа пользователей Haskell</a> при поддержке компании <a href="http://dataart.ua/">DataArt</a> приглашает всех желающих узнать больше про функциональный язык <a href="http://haskell.org/">Haskell</a> и его экосистему.</p>
+<h2 id="о-чем-поговорим">О чем поговорим</h2>
+<p>У новичков в Haskell, помимо самого языка, часто возникают сложности с экосистемой. Как установить Haskell, как найти и установить нужные пакеты, где искать документацию, и т.д. Мы попытаемся ответить на эти вопросы.</p>
+<p>Также обсудим, какие бывают проблемы при сборке Haskell-пакетов, и как с ними бороться. И научимся пользоваться песочницами (sandboxes), которые появились в последней версии Cabal.</p>
+<p>Докладчик — <a href="http://ro-che.info/">Роман Чепляка</a>.</p>
+<h2 id="время-и-место">Время и место</h2>
+<p>Встреча состоится 15 октября 2013 года в конференц-зале компании DataArt: Одесса, парк им. Шевченко, стадион “Черноморец”, корпус D1, 5 этаж.</p>
+<ul>
+<li>18:30 — сбор участников</li>
+<li>19:00 — доклад</li>
+<li>20:00 — неформальное общение</li>
+</ul>
+<h2 id="регистрация">Регистрация</h2>
+<p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1ZRC0dkDT5zvDBRvrcfm4kDNB0NoYT9WzPF66nyl5HgQ/viewform">зарегистрироваться</a>.</p>]]></description>
+    <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2013-10-03-announce.html</guid>
+</item>
 
     </channel> 
 </rss>
