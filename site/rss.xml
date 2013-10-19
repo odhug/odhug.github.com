@@ -173,6 +173,16 @@
     <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://odhug.github.com/site/posts/2013-10-03-announce.html</guid>
 </item>
+<item>
+    <title>Знакомство с экосистемой: отчет и слайды</title>
+    <link>http://odhug.github.com/site/posts/2013-10-19-report.html</link>
+    <description><![CDATA[<p>Спасибо всем, кто пришел <a href="http://odhug.github.io/site/posts/2013-10-03-announce.html">познакомиться с экосистемой Haskell</a>.</p>
+<p>DataArt опубликовали <a href="http://www.dataart.ru/blog/2013/10/soobshhestvo-haskell-znakomstva-i-otkry-tiya/">отчет</a> о встрече.</p>
+<p>А вот <a href="http://ro-che.info/docs/2013-10-15-haskell-ecosystem.html">слайды</a>, с ссылками на полезные ресурсы.</p>
+<p>Следующая встреча состоится в середине ноября, следите за анонсами!</p>]]></description>
+    <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://odhug.github.com/site/posts/2013-10-19-report.html</guid>
+</item>
 
     </channel> 
 </rss>
