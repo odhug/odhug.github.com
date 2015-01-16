@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Odessa Haskell User Group</title>
-        <link>http://odhug.github.com/site</link>
+        <link>haskell.od.ua</link>
         <description><![CDATA[OdHUG news and announcements]]></description>
-        <atom:link href="http://odhug.github.com/site/rss.xml" rel="self"
+        <atom:link href="haskell.od.ua/rss.xml" rel="self"
                    type="application/rss+xml" />
         <lastBuildDate>Tue, 18 Sep 2012 00:00:00 UT</lastBuildDate>
         <item>
     <title>Курс по Haskell</title>
-    <link>http://odhug.github.com/site/posts/2012-09-18-onuhs-announce.html</link>
+    <link>haskell.od.ua/posts/2012-09-18-onuhs-announce.html</link>
     <description><![CDATA[<p>Как я уже объявлял на последней встрече, я буду читать курс по Haskell в Одесском университете. Занятия будут проходить по субботам, ориентировочно с 10.30 до 12.30, в здании мехмата на Дворянской.</p>
 <p>Если есть желание посещать, напишите мне.</p>]]></description>
     <pubDate>Tue, 18 Sep 2012 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2012-09-18-onuhs-announce.html</guid>
+    <guid>haskell.od.ua/posts/2012-09-18-onuhs-announce.html</guid>
 </item>
 <item>
     <title>Октябрьская встреча</title>
-    <link>http://odhug.github.com/site/posts/2012-10-02-announce.html</link>
+    <link>haskell.od.ua/posts/2012-10-02-announce.html</link>
     <description><![CDATA[<p>Очередная встреча OdHUG состоится в этот четверг, 4 октября. Приношу извинения за столь позднее объявление.</p>
 <p>Координаты те же: Алхимия (Дерибасовская, 8), 19.00.</p>
 <p><em>Просьба отписаться мне на почту, если вы собираетесь прийти.</em></p>
@@ -28,11 +28,11 @@
 <li>если повезет, Сережа расскажет нам о прогрессе своего проекта software-defined radio</li>
 </ul>]]></description>
     <pubDate>Tue, 02 Oct 2012 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2012-10-02-announce.html</guid>
+    <guid>haskell.od.ua/posts/2012-10-02-announce.html</guid>
 </item>
 <item>
     <title>Ноябрьская встреча</title>
-    <link>http://odhug.github.com/site/posts/2012-11-06-announce.html</link>
+    <link>haskell.od.ua/posts/2012-11-06-announce.html</link>
     <description><![CDATA[<p>Послезавтра, 8.11, состоится очередная встреча OdHUG.</p>
 <p>Условия те же — 19.00, Алхимия.</p>
 <p>Регистрация мне на почту.</p>
@@ -40,20 +40,20 @@
 <p>Подумайте, что бы вам было интересно рассказать или обсудить.</p>
 <p>Кстати, если кто пишет на Haskell в vim — я давеча написал маленький, но полезный плагин https://github.com/feuerbach/vim-hs-module-name</p>]]></description>
     <pubDate>Tue, 06 Nov 2012 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2012-11-06-announce.html</guid>
+    <guid>haskell.od.ua/posts/2012-11-06-announce.html</guid>
 </item>
 <item>
     <title>Декабрьская встреча</title>
-    <link>http://odhug.github.com/site/posts/2012-12-13-announce.html</link>
+    <link>haskell.od.ua/posts/2012-12-13-announce.html</link>
     <description><![CDATA[<p>Последняя встреча в этом году состоится в это воскресенье, 16.12, в 14.00.</p>
 <p>Эксперимента ради, проведем ее в Циферблате (пер. Вице-Адмирала Жукова 3/7, между Греческой и Дерибасовской). http://vk.com/clockfaceodessa</p>
 <p>Как обычно, будем общаться на разные околохаскельные темы. Плюс, я сделаю один интересный анонс :)</p>]]></description>
     <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2012-12-13-announce.html</guid>
+    <guid>haskell.od.ua/posts/2012-12-13-announce.html</guid>
 </item>
 <item>
     <title>Январская встреча</title>
-    <link>http://odhug.github.com/site/posts/2013-01-06-announce.html</link>
+    <link>haskell.od.ua/posts/2013-01-06-announce.html</link>
     <description><![CDATA[<p>Первая встреча в этом году состоится в следующий четверг, 19 января, в Циферблате, в 19.00.</p>
 <p>В программе:</p>
 <ul>
@@ -64,31 +64,31 @@
 <li><p>поделимся друг с другом последними достижениями и дальнейшими творческими планами :)</p></li>
 </ul>]]></description>
     <pubDate>Sun, 06 Jan 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-01-06-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-01-06-announce.html</guid>
 </item>
 <item>
     <title>Февральская встреча</title>
-    <link>http://odhug.github.com/site/posts/2013-01-31-announce.html</link>
+    <link>haskell.od.ua/posts/2013-01-31-announce.html</link>
     <description><![CDATA[<p>В ближайшую среду, 6 февраля, состоится очередная встреча OdHug!</p>
 <p>По традиции, соберемся в Циферблате и перетрем последние хаскельные сплетни :)</p>
 <p>Время: <strong>19.00</strong>.</p>
 <p>Обратите внимание, что мы, возможно, будем в подвальном этаже. А может и нет.</p>
 <p>Регистрация мне <a href="mailto:roma@ro-che.info">на почту</a>, пожалуйста.</p>]]></description>
     <pubDate>Thu, 31 Jan 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-01-31-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-01-31-announce.html</guid>
 </item>
 <item>
     <title>Haskell-хакатон в Одессе</title>
-    <link>http://odhug.github.com/site/posts/2013-02-27-odhac.html</link>
+    <link>haskell.od.ua/posts/2013-02-27-odhac.html</link>
     <description><![CDATA[<p>С 3 по 5 мая на базе компании <a href="http://www.provectus-it.com/">Provectus IT</a> в Одессе пройдет <a href="http://www.haskell.org/haskellwiki/OdHac">международный Haskell-хакатон</a>.</p>
 <p>Хакатон — это отличная возможность познакомиться с другими хаскеллистами, найти новых участников для вашего проекта, улучшить существующие или создать новые библиотеки и инструменты.</p>
 <p>Чтобы принять участие, пожалуйста, <a href="http://bit.ly/OdHacReg">зарегистрируйтесь</a>.</p>]]></description>
     <pubDate>Wed, 27 Feb 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-02-27-odhac.html</guid>
+    <guid>haskell.od.ua/posts/2013-02-27-odhac.html</guid>
 </item>
 <item>
     <title>Мартовская встреча</title>
-    <link>http://odhug.github.com/site/posts/2013-02-28-announce.html</link>
+    <link>haskell.od.ua/posts/2013-02-28-announce.html</link>
     <description><![CDATA[<p>Следующая встреча OdHUG пройдет в субботу, 9 марта, в Алхимии (Дерибасовская, 8), в 19.00.</p>
 <p>На повестке дня, помимо прочего:</p>
 <ul>
@@ -98,64 +98,64 @@
 </ul>
 <p><a href="https://docs.google.com/forms/d/1QBNlDj93W-A4x_ReJColZ0-UiyLIEnggmnr05OfOFms/viewform">Регистрация</a></p>]]></description>
     <pubDate>Thu, 28 Feb 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-02-28-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-02-28-announce.html</guid>
 </item>
 <item>
     <title>Апрельская встреча</title>
-    <link>http://odhug.github.com/site/posts/2013-04-02-announce.html</link>
+    <link>haskell.od.ua/posts/2013-04-02-announce.html</link>
     <description><![CDATA[<p>В ближайший четверг, 4 апреля, состоится последняя пред-<a href="http://odhug.github.com/site/posts/2013-02-27-odhac.html">хакатоновская</a> встреча OdHUG!</p>
 <p>Встречаемся в <strong>Циферблате</strong> (Вице-Адмирала Жукова, 3/7) в <strong>19.00</strong>.</p>
 <p>Поговорим, среди прочего, о generic programming и графических интерфейсах.</p>
 <p><a href="https://docs.google.com/forms/d/1WCHqPBx3-N7hHZ52TfgzOymwuZ-AIHBTTCXPtZi_E_0/viewform">Регистрация</a></p>]]></description>
     <pubDate>Tue, 02 Apr 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-04-02-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-04-02-announce.html</guid>
 </item>
 <item>
     <title>Июньская встреча</title>
-    <link>http://odhug.github.com/site/posts/2013-06-17-announce.html</link>
+    <link>haskell.od.ua/posts/2013-06-17-announce.html</link>
     <description><![CDATA[<p>В ближайшую пятницу, 21 июня, состоится очередная встреча OdHUG!</p>
 <p>Встречаемся в <strong>Алхимии</strong> (Дерибасовская, 8) в <strong>19.00</strong>.</p>
 <p>Поговорим, среди прочего, о функциональном реактивном программировании (FRP).</p>
 <p>В гостях у OdHUG — <a href="http://www.chreekat.net/">Брайан Рихтер</a> из Калифорнии! Поэтому общаться будем на английском.</p>
 <p><a href="https://docs.google.com/forms/d/1CREiycl795QMmsj1FU5tSn1SQuI3o1Tzme1zn6lbX9I/viewform">Регистрация</a></p>]]></description>
     <pubDate>Mon, 17 Jun 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-06-17-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-06-17-announce.html</guid>
 </item>
 <item>
     <title>Июльская встреча</title>
-    <link>http://odhug.github.com/site/posts/2013-07-13-announce.html</link>
+    <link>haskell.od.ua/posts/2013-07-13-announce.html</link>
     <description><![CDATA[<p>В ближайшую среду, 17 июля, состоится очередная встреча OdHUG!</p>
 <p>Встречаемся в <strong>Циферблате</strong> (Вице-Адмирала Жукова, 3/7) в <strong>19.00</strong>. Вероятно, будем сидеть <strong>внизу</strong>.</p>
 <p>На этот раз надеемся все-таки поговорить об FRP и познакомиться с Брайаном :)</p>
 <p><a href="https://docs.google.com/forms/d/1YQ7PjQ4tVhbUffFlXa-rzIx_cN_qg1VD6ZCKJ52r8yI/viewform">Регистрация</a></p>]]></description>
     <pubDate>Sat, 13 Jul 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-07-13-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-07-13-announce.html</guid>
 </item>
 <item>
     <title>Встреча в августе</title>
-    <link>http://odhug.github.com/site/posts/2013-08-07-announce.html</link>
+    <link>haskell.od.ua/posts/2013-08-07-announce.html</link>
     <description><![CDATA[<p>Во вторник, 13 августа, состоится очередная встреча OdHUG!</p>
 <p>Встречаемся в <strong>Алхимии</strong> (Дерибасовская, 8) в <strong>19.00</strong>.</p>
 <p>Обсудим <a href="https://research.microsoft.com/en-us/events/icfpcontest2013/">ICFP Programming Contest 2013</a>, который пройдет с пятницы по воскресенье. Я буду участвовать, так что смогу поделиться впечатлениями из первых рук. Если еще кто-то из участников придет — будет вдвойне интересней!</p>
 <p>О прошлых ICFPC можно почитать в <a href="http://users.livejournal.com/_adept_/tag/icfpc">блоге Дмитрия Астапова</a>.</p>
 <p><a href="https://docs.google.com/forms/d/1sGtqqD32of2dBejiO_guWPhwlatiRSnk5xuFRgnQJoY/viewform"><strong>Регистрация</strong></a></p>]]></description>
     <pubDate>Wed, 07 Aug 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-08-07-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-08-07-announce.html</guid>
 </item>
 <item>
     <title>Встреча в сентябре</title>
-    <link>http://odhug.github.com/site/posts/2013-09-16-announce.html</link>
+    <link>haskell.od.ua/posts/2013-09-16-announce.html</link>
     <description><![CDATA[<p>В четверг, 19 сентября, состоится очередная встреча OdHUG!</p>
 <p>Встречаемся в <strong>Алхимии</strong> (Дерибасовская, 8) в <strong>19.00</strong>.</p>
 <p>Сентябрь — активный месяц в мире Haskell. В начале месяца прошел <a href="http://www.haskell.org/haskellwiki/ZuriHac2013">хакатон</a>, а в конце месяца состоится <a href="http://icfpconference.org/icfp2013/">самая главная конференция</a>. Будет что обсудить :)</p>
 <p>Ну и, как обычно, можно будет задавать вопросы и получать ответы.</p>
 <p><a href="https://docs.google.com/forms/d/1Eia-B5_pTG26bkYQ1rDg88Th2ZCWa6PSN9Ml9EQ2k7k/viewform"><strong>Регистрация</strong></a></p>]]></description>
     <pubDate>Mon, 16 Sep 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-09-16-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-09-16-announce.html</guid>
 </item>
 <item>
     <title>Haskell: знакомство с экосистемой</title>
-    <link>http://odhug.github.com/site/posts/2013-10-03-announce.html</link>
+    <link>haskell.od.ua/posts/2013-10-03-announce.html</link>
     <description><![CDATA[<p><a href="http://odhug.github.io/">Одесская группа пользователей Haskell</a> при поддержке компании <a href="http://dataart.ua/">DataArt</a> приглашает всех желающих узнать больше про функциональный язык <a href="http://haskell.org/">Haskell</a> и его экосистему.</p>
 <h2 id="о-чем-поговорим">О чем поговорим</h2>
 <p>У новичков в Haskell, помимо самого языка, часто возникают сложности с экосистемой. Как установить Haskell, как найти и установить нужные пакеты, где искать документацию, и т.д. Мы попытаемся ответить на эти вопросы.</p>
@@ -171,21 +171,21 @@
 <h2 id="регистрация">Регистрация</h2>
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1ZRC0dkDT5zvDBRvrcfm4kDNB0NoYT9WzPF66nyl5HgQ/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-10-03-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-10-03-announce.html</guid>
 </item>
 <item>
     <title>Знакомство с экосистемой: отчет и слайды</title>
-    <link>http://odhug.github.com/site/posts/2013-10-19-report.html</link>
+    <link>haskell.od.ua/posts/2013-10-19-report.html</link>
     <description><![CDATA[<p>Спасибо всем, кто пришел <a href="http://odhug.github.io/site/posts/2013-10-03-announce.html">познакомиться с экосистемой Haskell</a>.</p>
 <p>DataArt опубликовали <a href="http://www.dataart.ru/blog/2013/10/soobshhestvo-haskell-znakomstva-i-otkry-tiya/">отчет</a> о встрече.</p>
 <p>А вот <a href="http://ro-che.info/docs/2013-10-15-haskell-ecosystem.html">слайды</a>, с ссылками на полезные ресурсы.</p>
 <p>Следующая встреча состоится в середине ноября, следите за анонсами!</p>]]></description>
     <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-10-19-report.html</guid>
+    <guid>haskell.od.ua/posts/2013-10-19-report.html</guid>
 </item>
 <item>
     <title>Haskell и ООП</title>
-    <link>http://odhug.github.com/site/posts/2013-10-26-announce.html</link>
+    <link>haskell.od.ua/posts/2013-10-26-announce.html</link>
     <description><![CDATA[<p><a href="http://odhug.github.io/">Одесская группа пользователей Haskell</a> при поддержке компании <a href="http://dataart.ua/">DataArt</a> приглашает всех желающих узнать больше про функциональный язык <a href="http://haskell.org/">Haskell</a>, объектно-ориентированное и алгебраическое программирование.</p>
 <h2 id="о-чем-поговорим">О чем поговорим</h2>
 <p>На последней встрече живой интерес вызвала тема ООП против ФП, поэтому было решено подробнее остановиться на этом вопросе и развеять популярные заблуждения.</p>
@@ -204,18 +204,18 @@
 <h2 id="регистрация">Регистрация</h2>
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1dNKjSltU8G80lVP8qb2jT5b9I6qwMtC2fN4u2s7X2fo/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Sat, 26 Oct 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-10-26-announce.html</guid>
+    <guid>haskell.od.ua/posts/2013-10-26-announce.html</guid>
 </item>
 <item>
     <title>Haskell и ООП: слайды</title>
-    <link>http://odhug.github.com/site/posts/2013-11-17-slides.html</link>
+    <link>haskell.od.ua/posts/2013-11-17-slides.html</link>
     <description><![CDATA[<p>Опубликованы <a href="http://ro-che.info/docs/2013-11-14-haskell-and-oop.html">слайды</a> со встречи «Haskell и ООП».</p>]]></description>
     <pubDate>Sun, 17 Nov 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-11-17-slides.html</guid>
+    <guid>haskell.od.ua/posts/2013-11-17-slides.html</guid>
 </item>
 <item>
     <title>Практикум по Haskell</title>
-    <link>http://odhug.github.com/site/posts/2013-12-05-announcement.html</link>
+    <link>haskell.od.ua/posts/2013-12-05-announcement.html</link>
     <description><![CDATA[<p><a href="http://odhug.github.io/">Одесская группа пользователей Haskell</a> при поддержке <a href="http://dataart.ua/">DataArt</a> приглашает всех желающих узнать больше про функциональный язык <a href="http://haskell.org/">Haskell</a> и познакомиться с монадами.</p>
 <h2 id="чем-займемся">Чем займемся</h2>
 <p>Хватит философии — время колбасить код!</p>
@@ -229,11 +229,11 @@
 <h2 id="регистрация">Регистрация</h2>
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/10bKas8mwDswaV8G3gZin-JgfNIu-KBbr1BrmBnbcPQM/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Thu, 05 Dec 2013 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2013-12-05-announcement.html</guid>
+    <guid>haskell.od.ua/posts/2013-12-05-announcement.html</guid>
 </item>
 <item>
     <title>Тестирование и Haskell</title>
-    <link>http://odhug.github.com/site/posts/2014-01-15-announcement.html</link>
+    <link>haskell.od.ua/posts/2014-01-15-announcement.html</link>
     <description><![CDATA[<p><a href="http://odhug.github.io/">Одесская группа пользователей Haskell</a> и <a href="http://dataart.ua/">DataArt</a> приглашают всех желающих узнать больше про функциональный язык программирования <a href="http://haskell.org/">Haskell</a>.</p>
 <h2 id="о-чем-поговорим">О чем поговорим</h2>
 <ul>
@@ -252,18 +252,33 @@
 <h2 id="регистрация">Регистрация</h2>
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1bsgA6m6DzRSYsHXJNHuFYa-iALkQo5lhb4fvqjvKexM/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Wed, 15 Jan 2014 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2014-01-15-announcement.html</guid>
+    <guid>haskell.od.ua/posts/2014-01-15-announcement.html</guid>
 </item>
 <item>
     <title>Встреча «Тестирование и Haskell» переносится</title>
-    <link>http://odhug.github.com/site/posts/2014-01-23-deferred.html</link>
+    <link>haskell.od.ua/posts/2014-01-23-deferred.html</link>
     <description><![CDATA[<p>Друзья,</p>
 <p>В связи с ситуацией в стране я считаю правильным отложить встречу, которая должна была состояться сегодня, пока положение не стабилизируется.</p>
 <p>Тестирование на Haskell — важная и интересная тема, и мы обязательно к ней вернемся. Но сегодня происходят события, которые многие, включая меня, считают не менее важными.</p>
 <p>Надеюсь на ваше понимание.</p>
 <p>(Все зарегистрировавшиеся участники были оповещены по email. Если вы не получили письмо или не успели его прочесть, приношу отдельные извинения.)</p>]]></description>
     <pubDate>Wed, 15 Jan 2014 00:00:00 UT</pubDate>
-    <guid>http://odhug.github.com/site/posts/2014-01-23-deferred.html</guid>
+    <guid>haskell.od.ua/posts/2014-01-23-deferred.html</guid>
+</item>
+<item>
+    <title>Январская встреча</title>
+    <link>haskell.od.ua/posts/2015-01-16-announcement.html</link>
+    <description><![CDATA[<p>В четверг, 22 января, состоится первая встреча OdHUG в 2015 году!</p>
+<p>Встречаемся в <strong>Алхимии</strong> (Дерибасовская, 8) в <strong>19.00</strong>.</p>
+<p>Обсудим несколько тем:</p>
+<ol style="list-style-type: decimal">
+<li><p>Развитие экосистемы языка Haskell, индустриальные инструменты разработки, такие вещи как Stackage, кастомные снапшоты и зачем это все нужно.</p></li>
+<li><p>Нововведения в Сabal 1.22, relocatable packages и прочие.</p></li>
+<li><p>Просто пообщаемся на интересные темы связанные с Haskell и его экосистемой.</p></li>
+</ol>
+<p><a href="https://docs.google.com/forms/d/1ernYqztINjrtnGb_tc1oFHlfTIW14RCFYe380oGw86w/viewform"><strong>Регистрация</strong></a></p>]]></description>
+    <pubDate>Fri, 16 Jan 2015 00:00:00 UT</pubDate>
+    <guid>haskell.od.ua/posts/2015-01-16-announcement.html</guid>
 </item>
 
     </channel> 
