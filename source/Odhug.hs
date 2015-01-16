@@ -208,7 +208,7 @@ feedConf = FeedConfiguration
   , feedDescription = "OdHUG news and announcements"
   , feedAuthorName = "OdHUG"
   , feedAuthorEmail = ""
-  , feedRoot = "http://odhug.github.com/site"
+  , feedRoot = "haskell.od.ua"
   }
 
 ourPandocCompiler =
