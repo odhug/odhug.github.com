@@ -52,6 +52,14 @@ main = hakyll $ do
 
   match "about.md" $ compile $ ourPandocCompiler
 
+  match "aboutf.md" $ do
+    route   $ setExtension "html"
+    compile $ pandocCompiler
+      >>= loadAndApplyTemplate "templates/about.html" defaultContext
+      >>= loadAndApplyTemplate "templates/default.html" 
+      (constField "title" tAbout <> defaultContext)
+      >>= relativizeUrls
+
   match "posts/*.md" $
     version "pandoc" $
     compile ourPandocCompiler
@@ -220,4 +228,5 @@ ourPandocCompiler =
 tIndex = "OdHUG"
 tBlog  = "OdHUG — блог"
 tForum = "OdHUG — форум"
+tAbout = "OdHUG - о нас"
 
