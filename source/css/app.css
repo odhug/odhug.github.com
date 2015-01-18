@@ -113,3 +113,7 @@ hr {
     color: #333; /* old IE */
     background-color: #D3D3D3; /* Modern Browsers */
 }
+
+.about {
+  margin-top: 70px;
+}
