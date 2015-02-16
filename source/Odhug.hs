@@ -72,7 +72,7 @@ main = hakyll $ do
       return html { itemIdentifier = item }
         >>= loadAndApplyTemplate "templates/post.html"
         ( postUrlCtx <> defaultContext)
-        >>= loadAndApplyTemplate "templates/default.html"
+        >>= loadAndApplyTemplate "templates/defaultn.html"
         ( titleCtx <> defaultContext)
         >>= relativizeUrls
 
