@@ -51,7 +51,7 @@ Array.prototype.filter||(Array.prototype.filter=function(c,f){if(null==this)thro
  */
 Array.prototype.map||(Array.prototype.map=function(d,f){var g,e,a;if(null==this)throw new TypeError(" this is null or not defined");var b=Object(this),h=b.length>>>0;if("function"!==typeof d)throw new TypeError(d+" is not a function");f&&(g=f);e=Array(h);for(a=0;a<h;){var c;a in b&&(c=b[a],c=d.call(g,c,a,b),e[a]=c);a++}return e});
 
-/* Analog of $(document).ready() from jQuery
+/* Analog of $$(document).ready() from jQuery
  * Minified from http://javascript.ru/unsorted/top-10-functions#9-onready
  */
 function bindReady(b){function a(){c||(c=!0,b())}var c=!1;if(document.addEventListener)document.addEventListener("DOMContentLoaded",function(){a()},!1);else if(document.attachEvent){if(document.documentElement.doScroll&&window==window.top){var d=function(){if(!c&&document.body)try{document.documentElement.doScroll("left"),a()}catch(b){setTimeout(d,0)}};d()}document.attachEvent("onreadystatechange",function(){document.readyState==="complete"&&a()})}window.addEventListener?window.addEventListener("load",

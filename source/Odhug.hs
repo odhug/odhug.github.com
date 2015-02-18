@@ -29,6 +29,7 @@ import Text.JSON
 import Text.Printf
 import Data.List (isPrefixOf)
 import Prelude hiding (div, span)
+import Text.Pandoc.Options
 
 ----------------------------------------------------------------------
 
@@ -49,11 +50,19 @@ main = hakyll $ do
     route idRoute
     compile copyFileCompiler
 
-  match "about.md" $ compile $ pandocCompiler
+  match "about.md" $ compile $ ourPandocCompiler
+
+  match "aboutf.md" $ do
+    route   $ setExtension "html"
+    compile $ pandocCompiler
+      >>= loadAndApplyTemplate "templates/about.html" defaultContext
+      >>= loadAndApplyTemplate "templates/default.html" 
+      (constField "title" tAbout <> defaultContext)
+      >>= relativizeUrls
 
   match "posts/*.md" $
     version "pandoc" $
-    compile pandocCompiler
+    compile ourPandocCompiler
 
   match "posts/*.md" $ do
     route   $ setExtension "html"
@@ -61,8 +70,11 @@ main = hakyll $ do
       item <- getUnderlying
       html <- load $ setVersion (Just "pandoc") item
       return html { itemIdentifier = item }
-        >>= loadAndApplyTemplate "templates/post.html" ( postUrlCtx <> defaultContext)
-        >>= loadAndApplyTemplate "templates/indefault.html" defaultContext
+        >>= loadAndApplyTemplate "templates/post.html"
+        ( postUrlCtx <> defaultContext)
+        >>= loadAndApplyTemplate "templates/defaultn.html"
+        ( titleCtx <> defaultContext)
+        >>= relativizeUrls
 
   create ["index.html"] $ do
     route idRoute
@@ -72,7 +84,8 @@ main = hakyll $ do
       makeItem ""
         >>= loadAndApplyTemplate "templates/index.html"
           (constField "images" images <> constField "about" about <> defaultContext) 
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/default.html"
+          (constField "title" tIndex <> defaultContext)
         >>= relativizeUrls
 
   create ["blog.html"] $ do
@@ -80,8 +93,10 @@ main = hakyll $ do
     compile $ do 
       posts <- posts
       makeItem ""
-        >>= loadAndApplyTemplate "templates/posts.html" (constField "posts" posts <> defaultContext)
-        >>= loadAndApplyTemplate "templates/default.html" defaultContext
+        >>= loadAndApplyTemplate "templates/posts.html"
+        (constField "posts" posts <> defaultContext)
+        >>= loadAndApplyTemplate "templates/default.html"
+        (constField "title" tBlog <> defaultContext)
         >>= relativizeUrls
 
   create ["js/events.js"] $ do
@@ -97,19 +112,39 @@ main = hakyll $ do
   route idRoute
   compile $ makeItem ""
     >>= loadAndApplyTemplate "templates/forum.html" defaultContext
-    >>= loadAndApplyTemplate "templates/default.html" defaultContext
+    >>= loadAndApplyTemplate "templates/default.html"
+    (constField "title" tForum <> defaultContext)
+    >>= relativizeUrls
+
+  create ["rss.xml"] $ do
+    route idRoute
+    let descContext = field "description" (return . itemBody)
+    compile $
+      loadAll ("posts/*.md" .&&. hasVersion "pandoc") >>=
+      renderRss feedConf (field "url" postUrl <> descContext <> defaultContext)
 
 ----------------------------------------------------------------------
 
+postUrl :: Item a -> Compiler String
 postUrl item = fmap (maybe "" toUrl) . getRoute . setVersion Nothing $ itemIdentifier item
-  
-postUrlCtx =  field "postUrl" postUrl
-  
+
+postUrlCtx :: Context a
+postUrlCtx = field "postUrl" postUrl
+
+titleCtx :: Context a
+titleCtx = field "title" $ \item -> do
+        metadata <- getMetadata $ itemIdentifier item
+        let title =  case Map.lookup "title" metadata of
+              Just value -> "OdHUG - " ++ value
+              Nothing    -> []
+        return title
+
 -- generate posts list to use in blog page
+posts :: Compiler String
 posts = do
   posts <- loadAll ("posts/*.md" .&&. hasVersion "pandoc")
   tmpl  <- loadBody "templates/post-item.html"
-  applyTemplateList tmpl (postUrlCtx <> defaultContext) $ recentFirst posts
+  applyTemplateList tmpl (postUrlCtx <> defaultContext) =<< recentFirst posts
 
 images = do
   images <- loadAll "images/promo/*";
@@ -119,8 +154,10 @@ images = do
                [ urlField "url" 
                , missingField  -- For better error messages
                ]
-  images' <- applyTemplateList imgTpl imageCtx images
-  return  $ replace "src=\"/" "src=\"./" images'
+  aimage  <- applyTemplate     imgTpl imageCtx $ head images
+  images' <- applyTemplateList imgTpl imageCtx $ tail images
+  return $ replace "src=\"/" "src=\"./"
+         $ (replace "item" "active item" $ itemBody aimage) ++ images'
 
 loadEvents :: [Item String] -> Template -> Compiler String
 loadEvents posts tmpl = do
@@ -137,8 +174,12 @@ loadEvents posts tmpl = do
       applyTemplate tmpl ( constField "url" url <>
                            constField "date" prettyDate <>
                            constField "datetime" ymdDate <> defaultContext) item
+      -- NB: this relativizeUrlsWith call relies on the fact that we only
+      -- show URLs at the root
+      >>= return . fmap (relativizeUrlsWith ".")
     return (date, description)
 
+makeEventList :: [(Day, String)] -> String
 makeEventList events =
   encode $ flip Prelude.map events $ \(date, description) ->
     toJSObject
@@ -169,3 +210,23 @@ ourLocale = defaultTimeLocale
     , "ноября"
     , "декабря"
     ]
+
+feedConf = FeedConfiguration
+  { feedTitle = "Odessa Haskell User Group"
+  , feedDescription = "OdHUG news and announcements"
+  , feedAuthorName = "OdHUG"
+  , feedAuthorEmail = ""
+  , feedRoot = "haskell.od.ua"
+  }
+
+ourPandocCompiler =
+  pandocCompilerWith
+    defaultHakyllReaderOptions
+    defaultHakyllWriterOptions
+      { writerEmailObfuscation = NoObfuscation }
+
+tIndex = "OdHUG"
+tBlog  = "OdHUG — блог"
+tForum = "OdHUG — форум"
+tAbout = "OdHUG - о нас"
+
