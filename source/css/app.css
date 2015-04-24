@@ -1,3 +1,7 @@
+html,body{
+    height: 100%
+}
+
 body {
     background-image: url(../images/pattern-13qb.png);
     background-position: left top;
@@ -25,6 +29,16 @@ body {
    .navbar{
        border-radius: 0px;
    }
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    margin: 0px auto -60px;
+}
+
+#footer {
+  margin-bottom: 0px;
 }
 
 h1 {
