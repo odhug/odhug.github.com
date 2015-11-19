@@ -24,7 +24,7 @@ import Data.String.Utils (replace)
 import Data.Time
 import Data.Time.Format
 import Hakyll
-import System.Locale
+import System.Locale hiding (defaultTimeLocale, months)
 import Text.JSON
 import Text.Printf
 import Data.List (isPrefixOf)
@@ -109,12 +109,12 @@ main = hakyll $ do
         >>= loadAndApplyTemplate "templates/events.tpl" (constField "events" events)
 
   create ["forum.html"] $ do
-  route idRoute
-  compile $ makeItem ""
-    >>= loadAndApplyTemplate "templates/forum.html" defaultContext
-    >>= loadAndApplyTemplate "templates/default.html"
-    (constField "title" tForum <> defaultContext)
-    >>= relativizeUrls
+    route idRoute
+    compile $ makeItem ""
+      >>= loadAndApplyTemplate "templates/forum.html" defaultContext
+      >>= loadAndApplyTemplate "templates/default.html"
+      (constField "title" tForum <> defaultContext)
+      >>= relativizeUrls
 
   create ["rss.xml"] $ do
     route idRoute
