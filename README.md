@@ -16,7 +16,7 @@ stack build
 
 ```
 .stack-work/install/x86_64-linux/lts-3.8/7.10.2/bin/Odhug rebuild
-``
+```
 
 ## Сборка только с помощью GHC
 
