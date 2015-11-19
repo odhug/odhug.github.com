@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>Odessa Haskell User Group</title>
         <link>haskell.od.ua</link>
@@ -14,6 +15,7 @@
 <p>Если есть желание посещать, напишите мне.</p>]]></description>
     <pubDate>Tue, 18 Sep 2012 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2012-09-18-onuhs-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Октябрьская встреча</title>
@@ -29,6 +31,7 @@
 </ul>]]></description>
     <pubDate>Tue, 02 Oct 2012 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2012-10-02-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Ноябрьская встреча</title>
@@ -41,6 +44,7 @@
 <p>Кстати, если кто пишет на Haskell в vim — я давеча написал маленький, но полезный плагин https://github.com/feuerbach/vim-hs-module-name</p>]]></description>
     <pubDate>Tue, 06 Nov 2012 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2012-11-06-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Декабрьская встреча</title>
@@ -50,6 +54,7 @@
 <p>Как обычно, будем общаться на разные околохаскельные темы. Плюс, я сделаю один интересный анонс :)</p>]]></description>
     <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2012-12-13-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Январская встреча</title>
@@ -65,6 +70,7 @@
 </ul>]]></description>
     <pubDate>Sun, 06 Jan 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-01-06-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Февральская встреча</title>
@@ -76,6 +82,7 @@
 <p>Регистрация мне <a href="mailto:roma@ro-che.info">на почту</a>, пожалуйста.</p>]]></description>
     <pubDate>Thu, 31 Jan 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-01-31-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Haskell-хакатон в Одессе</title>
@@ -85,6 +92,7 @@
 <p>Чтобы принять участие, пожалуйста, <a href="http://bit.ly/OdHacReg">зарегистрируйтесь</a>.</p>]]></description>
     <pubDate>Wed, 27 Feb 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-02-27-odhac.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Мартовская встреча</title>
@@ -99,6 +107,7 @@
 <p><a href="https://docs.google.com/forms/d/1QBNlDj93W-A4x_ReJColZ0-UiyLIEnggmnr05OfOFms/viewform">Регистрация</a></p>]]></description>
     <pubDate>Thu, 28 Feb 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-02-28-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Апрельская встреча</title>
@@ -109,6 +118,7 @@
 <p><a href="https://docs.google.com/forms/d/1WCHqPBx3-N7hHZ52TfgzOymwuZ-AIHBTTCXPtZi_E_0/viewform">Регистрация</a></p>]]></description>
     <pubDate>Tue, 02 Apr 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-04-02-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Июньская встреча</title>
@@ -120,6 +130,7 @@
 <p><a href="https://docs.google.com/forms/d/1CREiycl795QMmsj1FU5tSn1SQuI3o1Tzme1zn6lbX9I/viewform">Регистрация</a></p>]]></description>
     <pubDate>Mon, 17 Jun 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-06-17-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Июльская встреча</title>
@@ -130,6 +141,7 @@
 <p><a href="https://docs.google.com/forms/d/1YQ7PjQ4tVhbUffFlXa-rzIx_cN_qg1VD6ZCKJ52r8yI/viewform">Регистрация</a></p>]]></description>
     <pubDate>Sat, 13 Jul 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-07-13-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Встреча в августе</title>
@@ -141,6 +153,7 @@
 <p><a href="https://docs.google.com/forms/d/1sGtqqD32of2dBejiO_guWPhwlatiRSnk5xuFRgnQJoY/viewform"><strong>Регистрация</strong></a></p>]]></description>
     <pubDate>Wed, 07 Aug 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-08-07-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Встреча в сентябре</title>
@@ -152,6 +165,7 @@
 <p><a href="https://docs.google.com/forms/d/1Eia-B5_pTG26bkYQ1rDg88Th2ZCWa6PSN9Ml9EQ2k7k/viewform"><strong>Регистрация</strong></a></p>]]></description>
     <pubDate>Mon, 16 Sep 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-09-16-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Haskell: знакомство с экосистемой</title>
@@ -172,6 +186,7 @@
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1ZRC0dkDT5zvDBRvrcfm4kDNB0NoYT9WzPF66nyl5HgQ/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-10-03-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Знакомство с экосистемой: отчет и слайды</title>
@@ -182,6 +197,7 @@
 <p>Следующая встреча состоится в середине ноября, следите за анонсами!</p>]]></description>
     <pubDate>Thu, 03 Oct 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-10-19-report.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Haskell и ООП</title>
@@ -205,6 +221,7 @@
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1dNKjSltU8G80lVP8qb2jT5b9I6qwMtC2fN4u2s7X2fo/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Sat, 26 Oct 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-10-26-announce.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Haskell и ООП: слайды</title>
@@ -212,6 +229,7 @@
     <description><![CDATA[<p>Опубликованы <a href="http://ro-che.info/docs/2013-11-14-haskell-and-oop.html">слайды</a> со встречи «Haskell и ООП».</p>]]></description>
     <pubDate>Sun, 17 Nov 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-11-17-slides.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Практикум по Haskell</title>
@@ -230,6 +248,7 @@
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/10bKas8mwDswaV8G3gZin-JgfNIu-KBbr1BrmBnbcPQM/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Thu, 05 Dec 2013 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2013-12-05-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Тестирование и Haskell</title>
@@ -253,6 +272,7 @@
 <p>Для участия во встрече необходимо <a href="https://docs.google.com/forms/d/1bsgA6m6DzRSYsHXJNHuFYa-iALkQo5lhb4fvqjvKexM/viewform">зарегистрироваться</a>.</p>]]></description>
     <pubDate>Wed, 15 Jan 2014 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2014-01-15-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Встреча «Тестирование и Haskell» переносится</title>
@@ -264,6 +284,7 @@
 <p>(Все зарегистрировавшиеся участники были оповещены по email. Если вы не получили письмо или не успели его прочесть, приношу отдельные извинения.)</p>]]></description>
     <pubDate>Wed, 15 Jan 2014 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2014-01-23-deferred.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Январская встреча</title>
@@ -279,12 +300,13 @@
 <p><a href="https://docs.google.com/forms/d/1ernYqztINjrtnGb_tc1oFHlfTIW14RCFYe380oGw86w/viewform"><strong>Регистрация</strong></a></p>]]></description>
     <pubDate>Fri, 16 Jan 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-01-16-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Мастер-классы по Haskell</title>
     <link>haskell.od.ua/posts/2015-02-12-ann-master-class.html</link>
     <description><![CDATA[<div class="figure">
-<img src="images/posts/master.png" />
+<img src="images/posts/master.png" alt="" />
 
 </div>
 <p>В предыдущем посте я писал, что благодаря помощи ИТ Академии Шаг мы возобновляем формат встреч с докладами.</p>
@@ -293,6 +315,7 @@
 <p>Желательно иметь опыт работы с любым языком программирования, но я постараюсь объяснять сложные вещи максимально доступно. Поэтому приходите сами и приглашайте своих друзей.</p>]]></description>
     <pubDate>Fri, 13 Feb 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-02-12-ann-master-class.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Февральская встреча</title>
@@ -304,12 +327,13 @@
 <p>А вот второй слот для доклада пока открыт, если у вас есть интересная информация или опыт различных подходов для тестирования в экосистеме Haskell, заполните ту же форму докладчика и поставьте галочку на отметке “ближайшая встреча”, я свяжусь с Вами.</p>]]></description>
     <pubDate>Fri, 16 Jan 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-02-13-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Февральская встреча</title>
     <link>haskell.od.ua/posts/2015-02-16-announcement.html</link>
     <description><![CDATA[<div class="figure">
-<img src="/images/posts/test.png" />
+<img src="/images/posts/test.png" alt="" />
 
 </div>
 <p>В четверг, 26 февраля, состоится вторая встреча OdHUG в 2015 году.</p>
@@ -321,12 +345,13 @@
 <p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
     <pubDate>Mon, 16 Feb 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-02-16-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Мастер-класс по Haskell</title>
     <link>haskell.od.ua/posts/2015-03-03-haskell-jazz.html</link>
     <description><![CDATA[<div class="figure">
-<img src="/images/posts/master.png" />
+<img src="/images/posts/master.png" alt="" />
 
 </div>
 <p>В четверг, 5 марта, состоится мой мастер класс <em>“Основы функционального программирования. Введение в Haskell”</em>. Вход свободный</p>
@@ -335,6 +360,7 @@
 <p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
     <pubDate>Wed, 04 Mar 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-03-03-haskell-jazz.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Мартовская встреча</title>
@@ -352,6 +378,7 @@
 <p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
     <pubDate>Sun, 15 Mar 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-03-15-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Мастер-класс по Haskell</title>
@@ -359,10 +386,14 @@
     <description><![CDATA[<p>В среду, 18 марта, состоится мой второй мастер класс <em>“Haskell практикум. Написание простых программ”</em>. Вход свободный</p>
 <p>Встречаемся в <strong>КА ШАГ</strong> (Еврейская, 3) в <strong>18.30</strong>, ауд.№219</p>
 <p>В отличие от первого, второй мастер-класс цикла будет носить практический характер и даст наглядное представление о том, как пишется код в Haskell.</p>
-<p>В программе мероприятия: - Знакомство с инструментами и экосистемой<br />- Знакомство с синтаксисом Haskell<br />- Функциональные приемы программирования<br />- Принципы построения программ</p>
+<p>В программе мероприятия: - Знакомство с инструментами и экосистемой<br />
+- Знакомство с синтаксисом Haskell<br />
+- Функциональные приемы программирования<br />
+- Принципы построения программ</p>
 <p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
     <pubDate>Mon, 16 Mar 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-03-16-haskell-jazz-2.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 <item>
     <title>Апрельская встреча</title>
@@ -380,7 +411,26 @@
 <p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
     <pubDate>Wed, 15 Apr 2015 00:00:00 UT</pubDate>
     <guid>haskell.od.ua/posts/2015-04-15-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
+</item>
+<item>
+    <title>Ноябрьская встреча</title>
+    <link>haskell.od.ua/posts/2015-11-19-announcement.html</link>
+    <description><![CDATA[<p>В четверг, 26 ноября, состоится очередная встреча OdHUG в 2015 году.</p>
+<p>Встречаемся в <strong>КА ШАГ</strong> (Еврейская, 3) в <strong>18.30</strong>.</p>
+<p><a href="https://docs.google.com/forms/d/1kkIURZpXBxtglTEH9VGuz4fa4JTd5E4bPdg4eZIDato/viewform"><strong>Регистрация на встречу</strong></a></p>
+<p>Встреча будет посвящена “Параллельному программированию в Haskell”.</p>
+<ul>
+<li>Я подготовлю доклад в котором постараюсь затронуть как основы так и конкретные примеры.</li>
+<li>Несколько Lightning Talk выступлений</li>
+</ul>
+<p>Если у вас есть интересный материал или чем поделиться <a href="">зарегистрируйтесь</a> в списке докладчиков.</p>
+<p>Формат Lightning Talk - это короткое выступление - 10-15 минут, где вы можете поделиться каким-то интересными вещами. Разобрались с интересной Haskell библиотекой или расширением GHC, нашли интересный хак или область применения. Расскажите всем! <a href="">регистрация</a></p>
+<p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
+    <pubDate>Thu, 19 Nov 2015 00:00:00 UT</pubDate>
+    <guid>haskell.od.ua/posts/2015-11-19-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
 </item>
 
-    </channel> 
+    </channel>
 </rss>
