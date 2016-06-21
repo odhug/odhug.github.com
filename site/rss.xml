@@ -431,6 +431,24 @@
     <guid>haskell.od.ua/posts/2015-11-19-announcement.html</guid>
     <dc:creator>OdHUG</dc:creator>
 </item>
+<item>
+    <title>Июньская встреча</title>
+    <link>haskell.od.ua/posts/2016-06-21-announcement.html</link>
+    <description><![CDATA[<p>В субботу, 25 ноября, состоится очередная встреча OdHUG в 2016 году.</p>
+<p>Встречаемся в <a href="http://impacthub.odessa.ua/"><strong>Impact Hub</strong></a> (Греческая, 1A) в <strong>14.00</strong>.</p>
+<p><a href="https://docs.google.com/forms/d/1U9EvJpN6k8N6Cf5wMWlNWlQpuuYUfqlMVzdxQcdKYzA/viewform"><strong>Регистрация на встречу</strong></a> обязательна.</p>
+<p>Встреча будет посвящена “FRP и библиотеке Reflex”.</p>
+<ul>
+<li>Я подготовлю доклад в котором постараюсь затронуть как основы так и конкретные примеры работы с <a href="https://github.com/reflex-frp/reflex-platform">reflex-platform</a></li>
+<li>Возможно Lightning Talks</li>
+</ul>
+<p>Если у вас есть интересный материал или чем поделиться <a href="https://docs.google.com/forms/d/1DiEZEN8DvoTXlFsn71dxZ1oDk-Fe0AyCzYGXYM8WgZs/viewform?usp=send_form">зарегистрируйтесь</a> в списке докладчиков.</p>
+<p>Формат Lightning Talk - это короткое выступление - 10-15 минут, где вы можете поделиться каким-то интересными вещами. Разобрались с интересной Haskell библиотекой или расширением GHC, нашли интересный хак или область применения. Расскажите всем! <a href="https://docs.google.com/forms/d/1DiEZEN8DvoTXlFsn71dxZ1oDk-Fe0AyCzYGXYM8WgZs/viewform?usp=send_form">регистрация</a></p>
+<p>Репосты, распространение и продвижение приветствуется!</p>]]></description>
+    <pubDate>Tue, 21 Jun 2016 00:00:00 UT</pubDate>
+    <guid>haskell.od.ua/posts/2016-06-21-announcement.html</guid>
+    <dc:creator>OdHUG</dc:creator>
+</item>
 
     </channel>
 </rss>
