@@ -15,6 +15,11 @@ stack build
 Затем, для работы использовать Hakyll команды из
 
 ```
+stack exec -- Odhug rebuild
+```
+или
+
+```
 .stack-work/install/x86_64-linux/lts-3.8/7.10.2/bin/Odhug rebuild
 ```
 
