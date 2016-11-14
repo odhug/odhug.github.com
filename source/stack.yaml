@@ -1,5 +1,8 @@
-flags: {}
+flags:
+  hakyll:
+    checkexternal: false
 packages:
 - '.'
-extra-deps: []
-resolver: lts-3.8
+extra-deps:
+- hakyll-4.9.1.0
+resolver: lts-7.9
