@@ -12,24 +12,28 @@
 
 module Main where
 
+import           Control.Applicative
+import           Control.Error hiding (left)
+import           Control.Monad
+import           Control.Monad.Trans
+import           Data.Aeson
+import           Data.Aeson.Types
+import qualified Data.HashMap.Strict as HM
+import           Data.List (isPrefixOf)
 import qualified Data.Map as Map
-
-import Control.Applicative
-import Control.Error hiding (left)
-import Control.Monad
-import Control.Monad.Trans
-import Data.Monoid
-import Data.Maybe
-import Data.String.Utils (replace)
-import Data.Time
-import Data.Time.Format
-import Hakyll
-import System.Locale hiding (defaultTimeLocale, months)
-import Text.JSON
-import Text.Printf
-import Data.List (isPrefixOf)
-import Prelude hiding (div, span)
-import Text.Pandoc.Options
+import           Data.Maybe
+import           Data.Monoid
+import           Data.String.Utils (replace)
+import qualified Data.Text as T
+import           Data.Time
+import           Data.Time.Format
+import           Hakyll
+import           Hakyll.Core.Metadata
+import           Prelude hiding (div, span)
+import           System.Locale hiding (defaultTimeLocale, months)
+import           Text.JSON
+import           Text.Pandoc.Options
+import           Text.Printf
 
 ----------------------------------------------------------------------
 
@@ -132,12 +136,19 @@ postUrlCtx :: Context a
 postUrlCtx = field "postUrl" postUrl
 
 titleCtx :: Context a
-titleCtx = field "title" $ \item -> do
-        metadata <- getMetadata $ itemIdentifier item
-        let title =  case Map.lookup "title" metadata of
-              Just value -> "OdHUG - " ++ value
-              Nothing    -> []
-        return title
+titleCtx =
+  field "title" $ \item ->
+  do
+    let identifier = itemIdentifier item
+    metadata <- getMetadata $ identifier
+    let title =
+          case HM.lookup "title" metadata of
+            Nothing    -> ""
+            Just value ->  -- this is not actual value, case it again
+              case value of
+                String val -> "OdHUG - " ++ (T.unpack val)
+                _          -> ""
+    return title
 
 -- generate posts list to use in blog page
 posts :: Compiler String
@@ -163,12 +174,17 @@ loadEvents :: [Item String] -> Template -> Compiler String
 loadEvents posts tmpl = do
   liftM (makeEventList . catMaybes) $ forM posts $ \item -> runMaybeT $ do 
     mdata   <- lift $ getMetadata $ itemIdentifier item
-    dateStr <- hoistMaybe $ Map.lookup "eventDate" mdata
-    let
-      date :: Day
-      date = parseDate (itemIdentifier item) dateStr
-      prettyDate = formatTime ourLocale "%-d %B %Y" date
-      ymdDate = formatDate date
+    dateStr <- hoistMaybe $ case HM.lookup "eventDate" mdata of
+                              Nothing    -> Nothing
+                              Just value ->  -- this is not actual value, case it again
+                                case value of
+                                  String val -> Just $ T.unpack val
+                                  _          -> Nothing
+    let date :: Day
+        date = parseDate (itemIdentifier item) dateStr
+        prettyDate = formatTime ourLocale "%-d %B %Y" date
+        ymdDate    = formatDate date
+        
     url <- lift $ postUrl item
     description <- liftM itemBody $ lift $
       applyTemplate tmpl ( constField "url" url <>
@@ -181,7 +197,7 @@ loadEvents posts tmpl = do
 
 makeEventList :: [(Day, String)] -> String
 makeEventList events =
-  encode $ flip Prelude.map events $ \(date, description) ->
+  Text.JSON.encode $ flip Prelude.map events $ \(date, description) ->
     toJSObject
       [("eventDescription", description)
       ,("eventDate", formatDate date)]
